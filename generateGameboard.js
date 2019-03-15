@@ -1,4 +1,7 @@
 function generateGameboard(lengthRow, lengthColumn){
+    if(lengthRow < 0 || lengthColumn < 0){
+        throw new Error("Invalid parameters");
+    }
 
     const tabRow = new Array(lengthRow);
     const tabColumn = new Array(lengthColumn);
@@ -12,5 +15,4 @@ function generateGameboard(lengthRow, lengthColumn){
 
     return tabRow;
 }
-generateGameboard(6,7);
 module.exports = generateGameboard;

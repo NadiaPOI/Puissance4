@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1552648366194" clover="3.2.0">
+  <project timestamp="1552648366195" name="All files">
+    <metrics statements="10" coveredstatements="10" conditionals="4" coveredconditionals="4" methods="1" coveredmethods="1" elements="15" coveredelements="15" complexity="0" loc="10" ncloc="10" packages="1" files="1" classes="1"/>
+    <file name="generateGameboard.js" path="C:\Users\nadia\Projets\Puissance4Js\generateGameboard.js">
+      <metrics statements="10" coveredstatements="10" conditionals="4" coveredconditionals="4" methods="1" coveredmethods="1"/>
+      <line num="3" count="4" type="cond" truecount="4" falsecount="0"/>
+      <line num="4" count="1" type="stmt"/>
+      <line num="7" count="3" type="stmt"/>
+      <line num="8" count="3" type="stmt"/>
+      <line num="10" count="3" type="stmt"/>
+      <line num="11" count="11" type="stmt"/>
+      <line num="12" count="11" type="stmt"/>
+      <line num="13" count="55" type="stmt"/>
+      <line num="17" count="3" type="stmt"/>
+      <line num="19" count="1" type="stmt"/>
+    </file>
+  </project>
+</coverage>

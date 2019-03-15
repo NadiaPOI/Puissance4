@@ -4,7 +4,8 @@
   "description": "Game of Puissance4 in Javascript",
   "main": "script.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest --coverage",
+    "tdd": "jest --watch"
   },
   "repository": {
     "type": "git",
