@@ -1,13 +1,13 @@
-const gameboard = require("./gameboard");
+const generateGameboard = require("./generateGameboard");
 
-describe("gameboard", function(){
+describe("generateGameboard", function(){
     it("should return a gameboard with 6 rows and 7 columns", function(){
-        expect(gameboard(6, 7)).toEqual([["","","","","","",""],
+        expect(generateGameboard(6, 7)).toEqual([["","","","","","",""],
                                          ["","","","","","",""],
                                          ["","","","","","",""],
                                          ["","","","","","",""],
                                          ["","","","","","",""],
                                          ["","","","","","",""]
                                         ]);
-    }) 
+    })    
 }) 
