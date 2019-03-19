@@ -1,18 +1,15 @@
-const gameboard = require("./generateGameboard");
+function addPawn(gameboard,column){
 
-function addPawn(row, column){
+    const lastRow = gameboard.length -1;
 
-    const tab = gameboard(6, 7);
-    console.log(tab);
-   
-    if(tab[row][column] === ""){
-        let newTabColumn = tab[row];
-        console.log(newTabColumn);
-        newTabColumn[column] = "Y";
-        tab[row] = newTabColumn;
-    }  
-    console.log(tab);
-    return tab;
+        if(gameboard[lastRow][column] === ""){
+            gameboard[lastRow][column] = "Y";
+        } else {
+            gameboard[lastRow - 1][column] = "Y";
+        }
+
+    console.log(gameboard);
+    return gameboard;
 }
 
 module.exports = addPawn;
