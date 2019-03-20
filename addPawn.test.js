@@ -29,5 +29,19 @@ describe("addPawn", function(){
                                                ["","","","","","",""],
                                                ["Y","","","","","",""],
                                                ["Y","","","","","",""]]);
-    })    
+    })
+    it("should add a pawn to gameboard", function(){
+        var gameboard = new Array(6);
+
+        for(var row = 0; row < gameboard.length; row++){
+            gameboard[row] = ["Y", "Y", "Y", "Y", "Y", "Y", "Y"];
+        }
+           
+        expect(addPawn(gameboard, 0)).toEqual([["Y", "Y", "Y", "Y", "Y", "Y", "Y"],
+                                               ["Y", "Y", "Y", "Y", "Y", "Y", "Y"],
+                                               ["Y", "Y", "Y", "Y", "Y", "Y", "Y"],
+                                               ["Y", "Y", "Y", "Y", "Y", "Y", "Y"],
+                                               ["Y", "Y", "Y", "Y", "Y", "Y", "Y"],
+                                               ["Y", "Y", "Y", "Y", "Y", "Y", "Y"]]);
+    })
 })

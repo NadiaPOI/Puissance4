@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1553010895043" clover="3.2.0">
-  <project timestamp="1553010895044" name="All files">
+<coverage generated="1553077451496" clover="3.2.0">
+  <project timestamp="1553077451496" name="All files">
     <metrics statements="17" coveredstatements="17" conditionals="6" coveredconditionals="6" methods="2" coveredmethods="2" elements="25" coveredelements="25" complexity="0" loc="17" ncloc="17" packages="1" files="2" classes="2"/>
     <file name="addPawn.js" path="C:\Users\nadia\Projets\Puissance4Js\addPawn.js">
       <metrics statements="7" coveredstatements="7" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
-      <line num="3" count="3" type="stmt"/>
-      <line num="5" count="3" type="cond" truecount="2" falsecount="0"/>
+      <line num="3" count="4" type="stmt"/>
+      <line num="5" count="4" type="cond" truecount="2" falsecount="0"/>
       <line num="6" count="2" type="stmt"/>
-      <line num="8" count="1" type="stmt"/>
-      <line num="11" count="3" type="stmt"/>
-      <line num="12" count="3" type="stmt"/>
+      <line num="8" count="2" type="stmt"/>
+      <line num="11" count="4" type="stmt"/>
+      <line num="12" count="4" type="stmt"/>
       <line num="15" count="1" type="stmt"/>
     </file>
     <file name="generateGameboard.js" path="C:\Users\nadia\Projets\Puissance4Js\generateGameboard.js">
