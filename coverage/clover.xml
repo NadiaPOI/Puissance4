@@ -1,28 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1553077451496" clover="3.2.0">
-  <project timestamp="1553077451496" name="All files">
-    <metrics statements="17" coveredstatements="17" conditionals="6" coveredconditionals="6" methods="2" coveredmethods="2" elements="25" coveredelements="25" complexity="0" loc="17" ncloc="17" packages="1" files="2" classes="2"/>
+<coverage generated="1553250045536" clover="3.2.0">
+  <project timestamp="1553250045536" name="All files">
+    <metrics statements="22" coveredstatements="22" conditionals="10" coveredconditionals="10" methods="2" coveredmethods="2" elements="34" coveredelements="34" complexity="0" loc="22" ncloc="22" packages="1" files="2" classes="2"/>
     <file name="addPawn.js" path="C:\Users\nadia\Projets\Puissance4Js\addPawn.js">
-      <metrics statements="7" coveredstatements="7" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
-      <line num="3" count="4" type="stmt"/>
-      <line num="5" count="4" type="cond" truecount="2" falsecount="0"/>
-      <line num="6" count="2" type="stmt"/>
-      <line num="8" count="2" type="stmt"/>
-      <line num="11" count="4" type="stmt"/>
-      <line num="12" count="4" type="stmt"/>
-      <line num="15" count="1" type="stmt"/>
+      <metrics statements="12" coveredstatements="12" conditionals="6" coveredconditionals="6" methods="1" coveredmethods="1"/>
+      <line num="1" count="1" type="stmt"/>
+      <line num="5" count="7" type="stmt"/>
+      <line num="7" count="7" type="cond" truecount="2" falsecount="0"/>
+      <line num="8" count="1" type="stmt"/>
+      <line num="11" count="6" type="cond" truecount="2" falsecount="0"/>
+      <line num="12" count="1" type="stmt"/>
+      <line num="15" count="5" type="cond" truecount="2" falsecount="0"/>
+      <line num="16" count="8" type="stmt"/>
+      <line num="18" count="5" type="stmt"/>
+      <line num="20" count="5" type="stmt"/>
+      <line num="21" count="5" type="stmt"/>
+      <line num="25" count="1" type="stmt"/>
     </file>
     <file name="generateGameboard.js" path="C:\Users\nadia\Projets\Puissance4Js\generateGameboard.js">
       <metrics statements="10" coveredstatements="10" conditionals="4" coveredconditionals="4" methods="1" coveredmethods="1"/>
-      <line num="3" count="8" type="cond" truecount="4" falsecount="0"/>
+      <line num="3" count="5" type="cond" truecount="4" falsecount="0"/>
       <line num="4" count="1" type="stmt"/>
-      <line num="7" count="7" type="stmt"/>
-      <line num="9" count="7" type="stmt"/>
-      <line num="10" count="33" type="stmt"/>
-      <line num="11" count="33" type="stmt"/>
-      <line num="12" count="33" type="stmt"/>
-      <line num="13" count="197" type="stmt"/>
-      <line num="17" count="7" type="stmt"/>
+      <line num="7" count="4" type="stmt"/>
+      <line num="9" count="4" type="stmt"/>
+      <line num="10" count="15" type="stmt"/>
+      <line num="11" count="15" type="stmt"/>
+      <line num="12" count="15" type="stmt"/>
+      <line num="13" count="71" type="stmt"/>
+      <line num="17" count="4" type="stmt"/>
       <line num="19" count="2" type="stmt"/>
     </file>
   </project>
