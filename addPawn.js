@@ -1,25 +1,22 @@
 const gameboard = require("./generateGameboard");
 
-function addPawn(gameboard,column){
+function addPawn(gameboard, column, colorPlayer) {
+  let lastRow = gameboard.length - 1;
 
-    let lastRow = gameboard.length - 1;
+  if (!gameboard[0].includes("")) {
+    throw new Error("The gameboard is full");
+  }
 
-    if(!gameboard[0].includes("")){
-        throw new Error("The gameboard is full");
-    }
+  if (gameboard[0][column] !== "") {
+    throw new Error("The column is full");
+  }
 
-    if(gameboard[0][column] === "Y"){
-        throw new Error("The column is full");
-    }
+  while (gameboard[lastRow][column] !== "" && lastRow > 0) {
+    lastRow--;
+  }
+  gameboard[lastRow][column] = colorPlayer;
 
-    while(gameboard[lastRow][column] === "Y" && lastRow > 0){
-            lastRow--;
-    }
-    gameboard[lastRow][column] = "Y";
-    
-    console.log(gameboard);
-    return gameboard;
-    
+  return gameboard;
 }
 
 module.exports = addPawn;
