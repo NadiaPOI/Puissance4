@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1554102530715" clover="3.2.0">
-  <project timestamp="1554102530716" name="All files">
-    <metrics statements="21" coveredstatements="21" conditionals="10" coveredconditionals="10" methods="2" coveredmethods="2" elements="33" coveredelements="33" complexity="0" loc="21" ncloc="21" packages="1" files="2" classes="2"/>
+<coverage generated="1554128847651" clover="3.2.0">
+  <project timestamp="1554128847651" name="All files">
+    <metrics statements="31" coveredstatements="31" conditionals="18" coveredconditionals="18" methods="3" coveredmethods="3" elements="52" coveredelements="52" complexity="0" loc="31" ncloc="31" packages="1" files="3" classes="3"/>
     <file name="addPawn.js" path="C:\Users\nadia\Projets\Puissance4Js\addPawn.js">
       <metrics statements="11" coveredstatements="11" conditionals="6" coveredconditionals="6" methods="1" coveredmethods="1"/>
       <line num="1" count="1" type="stmt"/>
@@ -27,7 +27,20 @@
       <line num="12" count="15" type="stmt"/>
       <line num="13" count="71" type="stmt"/>
       <line num="17" count="4" type="stmt"/>
-      <line num="19" count="2" type="stmt"/>
+      <line num="19" count="3" type="stmt"/>
+    </file>
+    <file name="isWinner.js" path="C:\Users\nadia\Projets\Puissance4Js\isWinner.js">
+      <metrics statements="10" coveredstatements="10" conditionals="8" coveredconditionals="8" methods="1" coveredmethods="1"/>
+      <line num="1" count="1" type="stmt"/>
+      <line num="4" count="2" type="stmt"/>
+      <line num="7" count="2" type="stmt"/>
+      <line num="8" count="12" type="stmt"/>
+      <line num="10" count="12" type="cond" truecount="2" falsecount="0"/>
+      <line num="14" count="1" type="stmt"/>
+      <line num="15" count="1" type="stmt"/>
+      <line num="19" count="5" type="stmt"/>
+      <line num="21" count="5" type="cond" truecount="2" falsecount="0"/>
+      <line num="25" count="1" type="stmt"/>
     </file>
   </project>
 </coverage>
