@@ -36,6 +36,7 @@ function isWinner(gameboard, row, col, colorPlayer) {
     col++;
     if (alignedPawns >= 4) return true;
   }
+  return false;
 }
 
 module.exports = isWinner;

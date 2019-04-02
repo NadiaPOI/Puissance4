@@ -1,7 +1,7 @@
 const isWinner = require("./isWinner");
 
 describe("isWinner", function() {
-  it("should return if player is winner when pawns are aligned horizontally", function() {
+  it("should return true if player is winner when pawns are aligned horizontally", function() {
     var gameboard = [
       ["", "", "", "", "", "", ""],
       ["", "", "", "", "", "", ""],
@@ -14,7 +14,7 @@ describe("isWinner", function() {
     expect(isWinner(gameboard, 5, 4, "R")).toBe(true);
   });
 
-  it("should return if player is winner when pawns are aligned vertically", function() {
+  it("should return true if player is winner when pawns are aligned vertically", function() {
     var gameboard = [
       ["", "", "", "", "", "", ""],
       ["", "", "", "", "", "", ""],
@@ -27,7 +27,7 @@ describe("isWinner", function() {
     expect(isWinner(gameboard, 5, 0, "Y")).toBe(true);
   });
 
-  it("should return if player is winner when pawns are aligned diagonally", function() {
+  it("should return true if player is winner when pawns are aligned diagonally left", function() {
     var gameboard = [
       ["", "", "", "", "", "", ""],
       ["", "", "", "", "", "", ""],
@@ -40,7 +40,7 @@ describe("isWinner", function() {
     expect(isWinner(gameboard, 2, 3, "Y")).toBe(true);
   });
 
-  it("should return if player is winner when pawns are aligned diagonally", function() {
+  it("should return false if not winner", function() {
     var gameboard = [
       ["", "", "", "", "", "", ""],
       ["", "", "", "", "", "", ""],
@@ -50,10 +50,10 @@ describe("isWinner", function() {
       ["R", "R", "R", "Y", "", "", ""]
     ];
 
-    expect(isWinner(gameboard, 2, 3, "Y")).not.toBe(true);
+    expect(isWinner(gameboard, 2, 3, "Y")).toBe(false);
   });
 
-  it("should return if player is winner when pawns are aligned diagonally", function() {
+  it("should return true if player is winner when pawns are aligned diagonally rigth", function() {
     var gameboard = [
       ["", "", "", "", "", "", ""],
       ["", "", "", "", "", "", ""],
