@@ -20,6 +20,14 @@ function isWinner(gameboard, row, col, colorPlayer) {
       gameboard[row][indexColumn] === colorPlayer ? alignedPawns + 1 : 0;
     if (alignedPawns >= 4) return "You win!! ;-)";
   }
+
+  //diagonally
+  for (let indexRow = row; indexRow < gameboard.length; indexRow++) {
+    alignedPawns =
+      gameboard[indexRow][col] === colorPlayer ? alignedPawns + 1 : 0;
+    col--;
+    if (alignedPawns >= 4) return "You win!! ;-)";
+  }
 }
 
 module.exports = isWinner;
