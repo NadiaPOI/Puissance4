@@ -7,7 +7,7 @@ function isWinner(gameboard, row, col, colorPlayer) {
   for (let indexRow = 0; indexRow < gameboard.length; indexRow++) {
     alignedPawns =
       gameboard[indexRow][col] === colorPlayer ? alignedPawns + 1 : 0;
-    if (alignedPawns >= 4) return "You win!! ;-)";
+    if (alignedPawns >= 4) return true;
   }
 
   //vertically
@@ -18,15 +18,23 @@ function isWinner(gameboard, row, col, colorPlayer) {
   ) {
     alignedPawns =
       gameboard[row][indexColumn] === colorPlayer ? alignedPawns + 1 : 0;
-    if (alignedPawns >= 4) return "You win!! ;-)";
+    if (alignedPawns >= 4) return true;
   }
 
-  //diagonally
+  //diagonally left
   for (let indexRow = row; indexRow < gameboard.length; indexRow++) {
     alignedPawns =
       gameboard[indexRow][col] === colorPlayer ? alignedPawns + 1 : 0;
     col--;
-    if (alignedPawns >= 4) return "You win!! ;-)";
+    if (alignedPawns >= 4) return true;
+  }
+
+  //diagonally right
+  for (let indexRow = row; indexRow < gameboard.length; indexRow++) {
+    alignedPawns =
+      gameboard[indexRow][col] === colorPlayer ? alignedPawns + 1 : 0;
+    col++;
+    if (alignedPawns >= 4) return true;
   }
 }
 

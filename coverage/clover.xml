@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1554209522469" clover="3.2.0">
-  <project timestamp="1554209522469" name="All files">
-    <metrics statements="35" coveredstatements="35" conditionals="22" coveredconditionals="21" methods="3" coveredmethods="3" elements="60" coveredelements="59" complexity="0" loc="35" ncloc="35" packages="1" files="3" classes="3"/>
+<coverage generated="1554212028096" clover="3.2.0">
+  <project timestamp="1554212028097" name="All files">
+    <metrics statements="39" coveredstatements="39" conditionals="26" coveredconditionals="25" methods="3" coveredmethods="3" elements="68" coveredelements="67" complexity="0" loc="39" ncloc="39" packages="1" files="3" classes="3"/>
     <file name="addPawn.js" path="C:\Users\nadia\Projets\Puissance4Js\addPawn.js">
       <metrics statements="11" coveredstatements="11" conditionals="6" coveredconditionals="6" methods="1" coveredmethods="1"/>
       <line num="1" count="1" type="stmt"/>
@@ -30,21 +30,25 @@
       <line num="19" count="3" type="stmt"/>
     </file>
     <file name="isWinner.js" path="C:\Users\nadia\Projets\Puissance4Js\isWinner.js">
-      <metrics statements="14" coveredstatements="14" conditionals="12" coveredconditionals="11" methods="1" coveredmethods="1"/>
+      <metrics statements="18" coveredstatements="18" conditionals="16" coveredconditionals="15" methods="1" coveredmethods="1"/>
       <line num="1" count="1" type="stmt"/>
-      <line num="4" count="3" type="stmt"/>
-      <line num="7" count="3" type="stmt"/>
-      <line num="8" count="18" type="stmt"/>
-      <line num="10" count="18" type="cond" truecount="2" falsecount="0"/>
-      <line num="14" count="2" type="stmt"/>
-      <line num="15" count="2" type="stmt"/>
-      <line num="19" count="12" type="stmt"/>
-      <line num="21" count="12" type="cond" truecount="2" falsecount="0"/>
-      <line num="25" count="1" type="stmt"/>
-      <line num="29" count="4" type="stmt"/>
-      <line num="31" count="4" type="stmt"/>
-      <line num="32" count="4" type="cond" truecount="1" falsecount="1"/>
-      <line num="36" count="1" type="stmt"/>
+      <line num="4" count="5" type="stmt"/>
+      <line num="7" count="5" type="stmt"/>
+      <line num="8" count="30" type="stmt"/>
+      <line num="10" count="30" type="cond" truecount="2" falsecount="0"/>
+      <line num="14" count="4" type="stmt"/>
+      <line num="15" count="4" type="stmt"/>
+      <line num="19" count="22" type="stmt"/>
+      <line num="21" count="22" type="cond" truecount="2" falsecount="0"/>
+      <line num="25" count="2" type="stmt"/>
+      <line num="26" count="8" type="stmt"/>
+      <line num="28" count="8" type="stmt"/>
+      <line num="29" count="8" type="cond" truecount="2" falsecount="0"/>
+      <line num="33" count="1" type="stmt"/>
+      <line num="34" count="4" type="stmt"/>
+      <line num="36" count="4" type="stmt"/>
+      <line num="37" count="4" type="cond" truecount="1" falsecount="1"/>
+      <line num="41" count="1" type="stmt"/>
     </file>
   </project>
 </coverage>
