@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1554365594262" clover="3.2.0">
-  <project timestamp="1554365594262" name="All files">
+<coverage generated="1554453107209" clover="3.2.0">
+  <project timestamp="1554453107210" name="All files">
     <metrics statements="45" coveredstatements="45" conditionals="26" coveredconditionals="25" methods="4" coveredmethods="4" elements="75" coveredelements="74" complexity="0" loc="45" ncloc="45" packages="1" files="4" classes="4"/>
     <file name="addPawn.js" path="C:\Users\nadia\Projets\Puissance4Js\addPawn.js">
       <metrics statements="11" coveredstatements="11" conditionals="6" coveredconditionals="6" methods="1" coveredmethods="1"/>

@@ -11,17 +11,15 @@ describe("turnOfPlayAI", function() {
       ["", "", "", "Y", "", "", ""]
     ];
 
-    var returnOne = function() {
-      return 1;
-    };
+    var randomPosition = Math.floor(Math.random() * 0);
 
-    expect(turnOfPlayAI(gameboard, returnOne())).toEqual([
+    expect(turnOfPlayAI(gameboard, randomPosition)).toEqual([
       ["", "", "", "", "", "", ""],
       ["", "", "", "", "", "", ""],
       ["", "", "", "", "", "", ""],
       ["", "", "", "", "", "", ""],
       ["", "", "", "", "", "", ""],
-      ["", "R", "", "Y", "", "", ""]
+      ["R", "", "", "Y", "", "", ""]
     ]);
   });
 });
