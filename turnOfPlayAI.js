@@ -1,24 +1,26 @@
 const addPawn = require("./addPawn");
 
 function turnOfPlayAI(gameboard, randomPosition) {
-  if (gameboard[0][randomPosition] !== "") {
-    var emptiesColumns = findEmptyColumn(gameboard[0]);
-    randomPosition =
-      emptiesColumns[Math.floor(Math.random() * emptiesColumns.length)];
-  }
-  addPawn(gameboard, randomPosition, "R");
+  findEmptyColumn(gameboard, randomPosition);
   console.log(gameboard);
-  return gameboard;
+  return addPawn(gameboard, randomPosition, "R");
 }
 
-function findEmptyColumn(row) {
+function findEmptyColumn(gameboard, randomPosition) {
   var emptiesColumns = [];
-  for (var column = 0; column < row.length; column++) {
-    if (row[column] === "") {
-      emptiesColumns.push(column);
+  for (let indexRow = 5; indexRow >= 0; indexRow--) {
+    if (gameboard[indexRow][randomPosition] !== "") {
+      for (var column = 0; column < gameboard[indexRow].length; column++) {
+        if (gameboard[indexRow][column] === "") {
+          emptiesColumns.push(column);
+        }
+      }
+      randomPosition =
+        emptiesColumns[Math.floor(Math.random() * emptiesColumns.length)];
     }
   }
-  return emptiesColumns;
+  //console.log(emptiesColumns[Math.floor(Math.random() * emptiesColumns.length)]);
+  return randomPosition;
 }
 
 module.exports = turnOfPlayAI;
