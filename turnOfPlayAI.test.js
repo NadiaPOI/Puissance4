@@ -1,14 +1,14 @@
 const turnOfPlayAI = require("./turnOfPlayAI");
 
 describe("turnOfPlayAI", function() {
-  it("should add a red pawn to a random column", function() {
+  it("should add a red pawn to a random column when column is empty", function() {
     var gameboard = [
       ["", "", "", "", "", "", ""],
       ["", "", "", "", "", "", ""],
       ["", "", "", "", "", "", ""],
       ["", "", "", "", "", "", ""],
       ["", "", "", "", "", "", ""],
-      ["", "", "", "Y", "", "", ""]
+      ["", "Y", "", "", "", "", ""]
     ];
 
     var randomFunction = () => 0;
@@ -19,11 +19,11 @@ describe("turnOfPlayAI", function() {
       ["", "", "", "", "", "", ""],
       ["", "", "", "", "", "", ""],
       ["", "", "", "", "", "", ""],
-      ["R", "", "", "Y", "", "", ""]
+      ["R", "Y", "", "", "", "", ""]
     ]);
   });
 
-  it("should add a red pawn to another colum when colum is full", function() {
+  it("should add a red pawn to another colum when column is full", function() {
     var gameboard = [
       ["Y", "", "", "", "", "", ""],
       ["R", "", "", "", "", "", ""],
@@ -42,6 +42,28 @@ describe("turnOfPlayAI", function() {
       ["R", "", "", "", "", "", ""],
       ["R", "", "R", "", "", "", ""],
       ["Y", "R", "Y", "Y", "", "", ""]
+    ]);
+  });
+
+  it("should add a red pawn to another colum when column is full", function() {
+    var gameboard = [
+      ["", "Y", "", "", "", "", ""],
+      ["", "R", "", "", "", "", ""],
+      ["", "Y", "", "", "", "", ""],
+      ["", "R", "", "", "", "", ""],
+      ["", "R", "R", "", "", "", ""],
+      ["", "Y", "Y", "Y", "", "", ""]
+    ];
+
+    var randomFunction = () => 1;
+
+    expect(turnOfPlayAI(gameboard, randomFunction)).toEqual([
+      ["", "Y", "", "", "", "", ""],
+      ["", "R", "", "", "", "", ""],
+      ["", "Y", "", "", "", "", ""],
+      ["", "R", "", "", "", "", ""],
+      ["", "R", "R", "", "", "", ""],
+      ["", "Y", "Y", "Y", "", "", "R"]
     ]);
   });
 });

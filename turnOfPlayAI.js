@@ -1,6 +1,6 @@
 const addPawn = require("./addPawn");
 
-//var randomFunction = Math.random;
+var randomFunction = Math.random;
 
 function turnOfPlayAI(gameboard, randomFunction) {
   return addPawn(gameboard, findEmptyColumn(gameboard, randomFunction), "R");
