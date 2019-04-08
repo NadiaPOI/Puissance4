@@ -11,9 +11,9 @@ describe("turnOfPlayAI", function() {
       ["", "", "", "Y", "", "", ""]
     ];
 
-    var randomPosition = Math.floor(Math.random() * 0);
+    var randomFunction = () => 0;
 
-    expect(turnOfPlayAI(gameboard, randomPosition)).toEqual([
+    expect(turnOfPlayAI(gameboard, randomFunction)).toEqual([
       ["", "", "", "", "", "", ""],
       ["", "", "", "", "", "", ""],
       ["", "", "", "", "", "", ""],
@@ -33,9 +33,9 @@ describe("turnOfPlayAI", function() {
       ["Y", "", "Y", "Y", "", "", ""]
     ];
 
-    var randomPosition = Math.floor(Math.random() * 0) + 1;
+    var randomFunction = () => 0;
 
-    expect(turnOfPlayAI(gameboard, randomPosition)).toEqual([
+    expect(turnOfPlayAI(gameboard, randomFunction)).toEqual([
       ["Y", "", "", "", "", "", ""],
       ["R", "", "", "", "", "", ""],
       ["Y", "", "", "", "", "", ""],
