@@ -55,7 +55,7 @@ describe("turnOfPlayAI", function() {
       ["", "Y", "Y", "Y", "", "", ""]
     ];
 
-    var randomFunction = () => 1;
+    var randomFunction = () => 0;
 
     expect(turnOfPlayAI(gameboard, randomFunction)).toEqual([
       ["", "Y", "", "", "", "", ""],
@@ -63,7 +63,29 @@ describe("turnOfPlayAI", function() {
       ["", "Y", "", "", "", "", ""],
       ["", "R", "", "", "", "", ""],
       ["", "R", "R", "", "", "", ""],
-      ["", "Y", "Y", "Y", "", "", "R"]
+      ["R", "Y", "Y", "Y", "", "", ""]
+    ]);
+  });
+
+  it("should add a red pawn to random colum when column is empty", function() {
+    var gameboard = [
+      ["", "", "", "", "", "", ""],
+      ["", "", "", "", "", "", ""],
+      ["", "", "", "", "", "", ""],
+      ["", "", "", "", "", "", ""],
+      ["", "", "", "", "", "", ""],
+      ["", "R", "Y", "Y", "", "", ""]
+    ];
+
+    var randomFunction = () => 0;
+
+    expect(turnOfPlayAI(gameboard, randomFunction)).toEqual([
+      ["", "", "", "", "", "", ""],
+      ["", "", "", "", "", "", ""],
+      ["", "", "", "", "", "", ""],
+      ["", "", "", "", "", "", ""],
+      ["", "", "", "", "", "", ""],
+      ["R", "R", "Y", "Y", "", "", ""]
     ]);
   });
 });
