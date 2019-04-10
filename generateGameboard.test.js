@@ -1,4 +1,4 @@
-import { generateGameboard } from "./generateGameboard.js";
+import { generateGameboard } from "./generateGameboard";
 
 describe("generateGameboard", function() {
   it("should return a gameboard with 6 rows and 7 columns", function() {

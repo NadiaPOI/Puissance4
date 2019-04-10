@@ -1,4 +1,4 @@
-import { addPawn } from "./addPawn.js";
+import { addPawn } from "./addPawn";
 
 var randomFunction = Math.random;
 
