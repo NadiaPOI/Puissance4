@@ -1,6 +1,6 @@
-const gameboard = require("./generateGameboard");
+import { gameboard } from "./generateGameboard.js";
 
-function isWinner(gameboard, row, col, colorPlayer) {
+export function isWinner(gameboard, row, col, colorPlayer) {
   let alignedPawns = 0;
 
   //horizontally
@@ -38,5 +38,3 @@ function isWinner(gameboard, row, col, colorPlayer) {
   }
   return false;
 }
-
-module.exports = isWinner;

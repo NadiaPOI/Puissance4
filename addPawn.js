@@ -1,6 +1,6 @@
-const gameboard = require("./generateGameboard");
+import gameboard from "./generateGameboard.js";
 
-function addPawn(gameboard, column, colorPlayer) {
+export function addPawn(gameboard, column, colorPlayer) {
   let lastRow = gameboard.length - 1;
 
   if (!gameboard[0].includes("")) {
@@ -18,5 +18,3 @@ function addPawn(gameboard, column, colorPlayer) {
 
   return gameboard;
 }
-
-module.exports = addPawn;

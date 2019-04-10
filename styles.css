@@ -1,0 +1,23 @@
+body {
+  width: 100%;
+}
+
+h1 {
+  text-align: center;
+}
+
+table {
+  margin: 0 auto;
+  border-spacing: 0;
+}
+
+tr {
+  padding: 0;
+}
+
+td {
+  border: 1px solid #002ae0;
+  background-color: #002ae0;
+  padding: 0;
+  margin: 0;
+}

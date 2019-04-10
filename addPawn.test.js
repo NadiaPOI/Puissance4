@@ -1,4 +1,4 @@
-const addPawn = require("./addPawn");
+import { addPawn } from "./addPawn.js";
 
 describe("addPawn", function() {
   it("should add a yellow pawn to column 6 when gameboard is empty", function() {

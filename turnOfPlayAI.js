@@ -1,14 +1,14 @@
-const addPawn = require("./addPawn");
+import { addPawn } from "./addPawn.js";
 
 var randomFunction = Math.random;
 
-function turnOfPlayAI(gameboard, randomFunction) {
+export function turnOfPlayAI(gameboard, randomFunction) {
   return addPawn(gameboard, findEmptyColumn(gameboard, randomFunction), "R");
 }
 
-function findEmptyColumn(gameboard, randomFunction) {
+export function findEmptyColumn(gameboard, randomFunction) {
   var emptiesColumns = [];
-  var row = gameboard[5];
+  var row = gameboard[gameboard.length - 1];
 
   for (var column = 0; column < row.length; column++) {
     if (row[column] === "") {
@@ -17,9 +17,7 @@ function findEmptyColumn(gameboard, randomFunction) {
   }
   console.log(emptiesColumns);
   var randomColumn =
-    emptiesColumns[Math.floor(randomFunction() * emptiesColumns.length)];
+    emptiesColumns[Math.floor(randomFunction() * (emptiesColumns.length - 1))];
   console.log(randomColumn);
   return randomColumn;
 }
-
-module.exports = turnOfPlayAI;

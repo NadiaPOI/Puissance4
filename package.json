@@ -17,6 +17,22 @@
     "url": "https://github.com/NadiaPOI/Puissance4/issues"
   },
   "homepage": "https://github.com/NadiaPOI/Puissance4#readme",
+  "jest": {
+    "verbose": true,
+    "moduleNameMapper": {
+      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/client/assetsTransformer.js"
+    },
+    "moduleFileExtensions": [
+      "js",
+      "jsx"
+    ],
+    "moduleDirectories": [
+      "node_modules"
+    ]
+  },
+  "transform": {
+    "\\.js$": "<rootDir>/node_modules/babel-jest"
+  },
   "devDependencies": {
     "jest": "^24.5.0"
   }
