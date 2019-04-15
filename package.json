@@ -5,7 +5,9 @@
   "main": "script.js",
   "scripts": {
     "test": "jest --coverage",
-    "tdd": "jest --watch"
+    "tdd": "jest --watch",
+    "start": "browser-sync start",
+    "dev": "browser-sync start --server --files *.html *.js --ss --index index.html"
   },
   "repository": {
     "type": "git",
@@ -18,8 +20,10 @@
   },
   "homepage": "https://github.com/NadiaPOI/Puissance4#readme",
   "devDependencies": {
+    "@babel/preset-env": "^7.4.3",
     "babel-core": "^6.26.3",
     "babel-preset-env": "^1.7.0",
+    "browser-sync": "^2.26.3",
     "jest": "^24.5.0"
   }
 }

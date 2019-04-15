@@ -1,4 +1,4 @@
-import { gameboard } from "./generateGameboard";
+import { generateGameboard } from "./generateGameboard.js";
 
 export function isWinner(gameboard, row, col, colorPlayer) {
   let alignedPawns = 0;

@@ -1,4 +1,4 @@
-import { addPawn } from "./addPawn";
+import { addPawn } from "./addPawn.js";
 
 var randomFunction = Math.random;
 
@@ -18,6 +18,5 @@ export function findEmptyColumn(gameboard, randomFunction) {
   console.log(emptiesColumns);
   var randomColumn =
     emptiesColumns[Math.floor(randomFunction() * (emptiesColumns.length - 1))];
-  console.log(randomColumn);
   return randomColumn;
 }

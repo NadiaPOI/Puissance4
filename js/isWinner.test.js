@@ -1,4 +1,4 @@
-import { isWinner } from "./isWinner";
+import { isWinner } from "./isWinner.js";
 
 describe("isWinner", function() {
   it("should return true if player is winner when pawns are aligned horizontally", function() {
