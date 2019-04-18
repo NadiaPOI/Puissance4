@@ -13,11 +13,6 @@ export function initGame(boardgame) {
       let emptyPosition = document.createElement("img");
       emptyPosition.setAttribute("src", "../img/empty.png");
       emptyPosition.setAttribute("class", indexCol);
-      /* emptyPosition.onclick = function() {
-        let clickedColumn = addEventListenerToColumn();
-
-        addYellowPawn(boardgame, clickedColumn());
-      }; */
       col.appendChild(emptyPosition);
       line.appendChild(col);
     }

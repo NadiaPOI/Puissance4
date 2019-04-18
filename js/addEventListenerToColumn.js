@@ -1,4 +1,5 @@
 import { addPawn } from "./addPawn.js";
+import { turnOfPlayAI, findEmptyColumn } from "./turnOfPlayAI.js";
 
 let randomFunction = Math.random;
 
@@ -21,4 +22,10 @@ export function addYellowPawn(gameboard, column) {
   console.log(gameboard);
 }
 
-export function addRedPawn(gameboard) {}
+export function addRedPawn(gameboard, column) {
+  column = findEmptyColumn(gameboard, randomFunction);
+  turnOfPlayAI(gameboard, randomFunction);
+  column.setAttribute("src", "../img/yellow.png");
+  let indexColumn = column.className;
+  console.log(gameboard);
+}
