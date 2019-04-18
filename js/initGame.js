@@ -1,10 +1,5 @@
-import { generateGameboard } from "./generateGameboard.js";
-import { addEventListenerToColumn } from "./addEventListenerToColumn.js";
-
-let boardgame = generateGameboard(6, 7);
-let row = boardgame[0];
-
 export function initGame(boardgame) {
+  let row = boardgame[0];
   let selectorTable = document.querySelector("table");
   // create lines
   for (let indexRow = boardgame.length - 1; indexRow >= 0; indexRow--) {
@@ -18,10 +13,11 @@ export function initGame(boardgame) {
       let emptyPosition = document.createElement("img");
       emptyPosition.setAttribute("src", "../img/empty.png");
       emptyPosition.setAttribute("class", indexCol);
-      emptyPosition.onclick = function() {
-        addEventListenerToColumn(this);
-        console.log(emptyPosition.parentNode.parentNode);
-      };
+      /* emptyPosition.onclick = function() {
+        let clickedColumn = addEventListenerToColumn();
+
+        addYellowPawn(boardgame, clickedColumn());
+      }; */
       col.appendChild(emptyPosition);
       line.appendChild(col);
     }

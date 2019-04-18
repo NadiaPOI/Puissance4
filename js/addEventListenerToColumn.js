@@ -1,12 +1,24 @@
 import { addPawn } from "./addPawn.js";
 
-export function addEventListenerToColumn(event) {
-  console.log(event);
-  /* var currentColumn = event.target;
-  console.log(currentColumn);
-  currentColumn.setAttribute("src", "../img/yellow.png");
-  var column = currentColumn.className;
-  let newBoardgame = addPawn(boardgame, column, "Y");
-  console.log(newBoardgame);
-  /*  return classNameElement; */
+let randomFunction = Math.random;
+
+export function addEventListenerToColumn(gameboard) {
+  let positions = document.querySelectorAll("img");
+
+  for (let position = 0; position < positions.length; position++) {
+    const column = positions[position];
+    column.addEventListener("click", function(event) {
+      let currentColumn = event.target;
+      addYellowPawn(gameboard, currentColumn);
+    });
+  }
 }
+
+export function addYellowPawn(gameboard, column) {
+  column.setAttribute("src", "../img/yellow.png");
+  let indexColumn = column.className;
+  addPawn(gameboard, indexColumn, "Y");
+  console.log(gameboard);
+}
+
+export function addRedPawn(gameboard) {}
