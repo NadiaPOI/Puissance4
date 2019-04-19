@@ -7,7 +7,7 @@
     "test": "jest --coverage",
     "tdd": "jest --watch",
     "start": "browser-sync start",
-    "dev": "browser-sync start --server --files *.html *.js --ss --index index.html"
+    "dev": "browser-sync start --server --files js/*.js, css/*.css, index.html"
   },
   "repository": {
     "type": "git",
