@@ -1,4 +1,4 @@
-import { turnOfPlayAI } from "./turnOfPlayAI.js";
+import { turnOfPlayAI, findEmptyColumn } from "./turnOfPlayAI.js";
 
 describe("turnOfPlayAI", function() {
   it("should add a red pawn to a random column when column is empty", function() {
@@ -12,8 +12,9 @@ describe("turnOfPlayAI", function() {
     ];
 
     var randomFunction = () => 0;
+    var randomColumn = findEmptyColumn(gameboard, randomFunction);
 
-    expect(turnOfPlayAI(gameboard, randomFunction)).toEqual([
+    expect(turnOfPlayAI(gameboard, randomColumn)).toEqual([
       ["", "", "", "", "", "", ""],
       ["", "", "", "", "", "", ""],
       ["", "", "", "", "", "", ""],
@@ -34,8 +35,9 @@ describe("turnOfPlayAI", function() {
     ];
 
     var randomFunction = () => 0;
+    var randomColumn = findEmptyColumn(gameboard, randomFunction);
 
-    expect(turnOfPlayAI(gameboard, randomFunction)).toEqual([
+    expect(turnOfPlayAI(gameboard, randomColumn)).toEqual([
       ["Y", "", "", "", "", "", ""],
       ["R", "", "", "", "", "", ""],
       ["Y", "", "", "", "", "", ""],
@@ -56,8 +58,9 @@ describe("turnOfPlayAI", function() {
     ];
 
     var randomFunction = () => 1;
+    var randomColumn = findEmptyColumn(gameboard, randomFunction);
 
-    expect(turnOfPlayAI(gameboard, randomFunction)).toEqual([
+    expect(turnOfPlayAI(gameboard, randomColumn)).toEqual([
       ["", "Y", "", "", "", "", ""],
       ["", "R", "", "", "", "", ""],
       ["", "Y", "", "", "", "", ""],
@@ -78,8 +81,9 @@ describe("turnOfPlayAI", function() {
     ];
 
     var randomFunction = () => 1;
+    var randomColumn = findEmptyColumn(gameboard, randomFunction);
 
-    expect(turnOfPlayAI(gameboard, randomFunction)).toEqual([
+    expect(turnOfPlayAI(gameboard, randomColumn)).toEqual([
       ["", "", "", "", "", "", ""],
       ["", "", "", "", "", "", ""],
       ["", "", "", "", "", "", ""],
