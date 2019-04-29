@@ -1,0 +1,12 @@
+language: "node_js"
+node_js: "8"
+
+deploy:
+  provider: pages
+  skip-cleanup: true
+  github-token: $GITHUB_TOKEN
+  local_dir: .
+  repo: NadiaPOI/Puissance4
+  target_branch: gh-pages
+  on:
+    branch: master
