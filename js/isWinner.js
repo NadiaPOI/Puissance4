@@ -1,10 +1,8 @@
-import { generateGameboard } from "./generateGameboard.js";
-
 export function isWinner(gameboard, row, col, colorPlayer) {
   let alignedPawns = 0;
 
   //horizontally
-  for (let indexRow = 0; indexRow < gameboard.length; indexRow++) {
+  for (let indexRow = gameboard.length - 1; indexRow >= 0; indexRow--) {
     alignedPawns =
       gameboard[indexRow][col] === colorPlayer ? alignedPawns + 1 : 0;
     if (alignedPawns >= 4) return true;

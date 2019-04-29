@@ -1,7 +1,10 @@
 import { addPawn } from "./addPawn.js";
 import { turnOfPlayAI, findEmptyColumn } from "./turnOfPlayAI.js";
+import { isWinner } from "./isWinner.js";
 
 let randomFunction = Math.random;
+let yellowWinner = false;
+let redWinner = false;
 
 export function addEventListenerToColumn(gameboard) {
   let positions = document.querySelectorAll("img");
@@ -10,7 +13,10 @@ export function addEventListenerToColumn(gameboard) {
     const column = positions[position];
     column.addEventListener("click", function(event) {
       let currentColumn = event.target;
-      addYellowPawn(gameboard, currentColumn);
+      let currentRow = currentColumn.parentNode.parentNode.id;
+      if (yellowWinner === false && redWinner === false) {
+        addYellowPawn(gameboard, currentColumn);
+      }
     });
   }
 }
@@ -18,14 +24,15 @@ export function addEventListenerToColumn(gameboard) {
 export function addYellowPawn(gameboard, column) {
   column.setAttribute("src", "../img/yellow.png");
   let indexColumn = column.className;
+  let indexRow = column.parentNode.parentNode.id;
   addPawn(gameboard, indexColumn, "Y");
-  addRedPawn(gameboard);
+  checkIfYellowWinner(gameboard, indexRow, indexColumn);
 }
 
 export function addRedPawn(gameboard) {
   let randomColumn = findEmptyColumn(gameboard, randomFunction);
-  console.log(randomColumn);
   let newGameboard = turnOfPlayAI(gameboard, randomColumn);
+
   for (let indexRow = 0; indexRow < newGameboard.length; indexRow++) {
     let row = newGameboard[indexRow];
     if (row.includes("R")) {
@@ -33,11 +40,27 @@ export function addRedPawn(gameboard) {
       let playedColumn = document.getElementById(indexPlayedRow).childNodes[
         randomColumn
       ].lastChild;
-      console.log(playedColumn.src);
       if (playedColumn.src === "http://localhost:3000/img/empty.png") {
         playedColumn.setAttribute("src", "../img/red.png");
+        checkIfRedWinner(gameboard, indexPlayedRow, playedColumn);
       }
     }
   }
-  console.log(newGameboard);
+}
+
+export function checkIfYellowWinner(gameboard, row, column) {
+  if (isWinner(gameboard, row, column, "Y") === true) {
+    yellowWinner = true;
+    console.log("Yellow player win ;-)");
+  } else {
+    addRedPawn(gameboard);
+    checkIfRedWinner(gameboard, row, column);
+  }
+}
+
+export function checkIfRedWinner(gameboard, row, column) {
+  if (isWinner(gameboard, row, column, "R") === true) {
+    redWinner = true;
+    console.log("Red player win ;-)");
+  }
 }
