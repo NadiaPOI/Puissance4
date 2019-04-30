@@ -13,7 +13,7 @@ export function initGame(boardgame) {
     for (let indexCol = 0; indexCol < row.length; indexCol++) {
       let col = document.createElement("td");
       let emptyPosition = document.createElement("img");
-      emptyPosition.setAttribute("src", "../img/empty.png");
+      emptyPosition.setAttribute("src", "./img/empty.png");
       emptyPosition.setAttribute("class", indexCol);
       col.appendChild(emptyPosition);
       line.appendChild(col);
