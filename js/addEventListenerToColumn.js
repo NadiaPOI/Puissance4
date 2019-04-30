@@ -22,16 +22,30 @@ export function addEventListenerToColumn(gameboard) {
 }
 
 export function addYellowPawn(gameboard, column) {
+  let indexRow = column.parentNode.parentNode.id;
+  let indexColumn = column.className;
+  let lastRow = document.getElementById(gameboard.length - 1);
+
   if (column.src !== "https://nadiapoi.github.io/Puissance4/img/empty.png") {
-    let indexRow = column.parentNode.parentNode.id;
-    let previousRow = document.getElementById(indexRow - 1).childNodes[
-      column.className
-    ].lastChild;
-    previousRow.setAttribute("src", "./img/yellow.png");
+    while (
+      indexRow.childNodes[indexColumn].src !==
+      "https://nadiapoi.github.io/Puissance4/img/empty.png"
+    ) {
+      indexRow--;
+      let previousRow = document.getElementById(indexRow).childNodes[
+        indexColumn
+      ].lastChild;
+      column = previousRow;
+    }
+  }
+
+  if (
+    lastRow.childNodes[indexColumn].src ===
+    "https://nadiapoi.github.io/Puissance4/img/empty.png"
+  ) {
+    column = lastRow.childNodes[indexColumn].lastChild;
   }
   column.setAttribute("src", "./img/yellow.png");
-  let indexColumn = column.className;
-  let indexRow = column.parentNode.parentNode.id;
   addPawn(gameboard, indexColumn, "Y");
   checkIfYellowWinner(gameboard, indexRow, indexColumn);
 }
