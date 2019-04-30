@@ -1,0 +1,29 @@
+{
+  "name": "puissance4js",
+  "version": "1.0.0",
+  "description": "Game of Puissance4 in Javascript",
+  "main": "script.js",
+  "scripts": {
+    "test": "jest --coverage",
+    "tdd": "jest --watch",
+    "start": "browser-sync start",
+    "dev": "browser-sync start --server --files js/*.js, css/*.css, index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NadiaPOI/Puissance4.git"
+  },
+  "author": "Nadia",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NadiaPOI/Puissance4/issues"
+  },
+  "homepage": "https://github.com/NadiaPOI/Puissance4#readme",
+  "devDependencies": {
+    "@babel/preset-env": "^7.4.3",
+    "babel-core": "^6.26.3",
+    "babel-preset-env": "^1.7.0",
+    "browser-sync": "^2.26.3",
+    "jest": "^24.5.0"
+  }
+}
