@@ -40,7 +40,10 @@ export function addRedPawn(gameboard) {
       let playedColumn = document.getElementById(indexPlayedRow).childNodes[
         randomColumn
       ].lastChild;
-      if (playedColumn.src === "./img/empty.png") {
+      if (
+        playedColumn.src ===
+        "https://nadiapoi.github.io/Puissance4/img/empty.png"
+      ) {
         playedColumn.setAttribute("src", "./img/red.png");
         checkIfRedWinner(gameboard, indexPlayedRow, playedColumn);
       }
