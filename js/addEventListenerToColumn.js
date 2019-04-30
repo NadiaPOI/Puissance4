@@ -22,7 +22,7 @@ export function addEventListenerToColumn(gameboard) {
 }
 
 export function addYellowPawn(gameboard, column) {
-  column.setAttribute("src", "../img/yellow.png");
+  column.setAttribute("src", "./img/yellow.png");
   let indexColumn = column.className;
   let indexRow = column.parentNode.parentNode.id;
   addPawn(gameboard, indexColumn, "Y");
@@ -40,8 +40,8 @@ export function addRedPawn(gameboard) {
       let playedColumn = document.getElementById(indexPlayedRow).childNodes[
         randomColumn
       ].lastChild;
-      if (playedColumn.src === "http://localhost:3000/img/empty.png") {
-        playedColumn.setAttribute("src", "../img/red.png");
+      if (playedColumn.src === "./img/empty.png") {
+        playedColumn.setAttribute("src", "./img/red.png");
         checkIfRedWinner(gameboard, indexPlayedRow, playedColumn);
       }
     }
