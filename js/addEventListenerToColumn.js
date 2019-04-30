@@ -46,6 +46,7 @@ export function addRedPawn(gameboard) {
       }
     }
   }
+  console.log(newGameboard);
 }
 
 export function checkIfYellowWinner(gameboard, row, column) {

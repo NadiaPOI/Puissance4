@@ -27,7 +27,7 @@ describe("isWinner", function() {
     expect(isWinner(gameboard, 5, 0, "Y")).toBe(true);
   });
 
-  it("should return true if player is winner when pawns are aligned diagonally left", function() {
+  it("should return true if player is winner when pawns are aligned diagonally left down", function() {
     var gameboard = [
       ["", "", "", "", "", "", ""],
       ["", "", "", "", "", "", ""],
@@ -53,7 +53,7 @@ describe("isWinner", function() {
     expect(isWinner(gameboard, 2, 3, "Y")).toBe(false);
   });
 
-  it("should return true if player is winner when pawns are aligned diagonally rigth", function() {
+  it("should return true if player is winner when pawns are aligned diagonally left up", function() {
     var gameboard = [
       ["", "", "", "", "", "", ""],
       ["", "", "", "", "", "", ""],
