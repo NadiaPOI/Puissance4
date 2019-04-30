@@ -27,7 +27,7 @@ export function addYellowPawn(gameboard, column) {
     let previousRow = document.getElementById(indexRow - 1).childNodes[
       column.className
     ].lastChild;
-    previousRow.setAttribute("src", "./img/yelow.png");
+    previousRow.setAttribute("src", "./img/yellow.png");
   }
   column.setAttribute("src", "./img/yellow.png");
   let indexColumn = column.className;
