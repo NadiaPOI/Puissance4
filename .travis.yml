@@ -5,7 +5,7 @@ deploy:
   provider: pages
   skip-cleanup: true
   github-token: $GITHUB_TOKEN
-  local_dir: ./
+  keep_history: true
   repo: NadiaPOI/Puissance4
   target_branch: gh-pages
   on:
