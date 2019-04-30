@@ -23,8 +23,8 @@ export function addEventListenerToColumn(gameboard) {
 
 export function addYellowPawn(gameboard, column) {
   if (column.src !== "https://nadiapoi.github.io/Puissance4/img/empty.png") {
-    let indexRow = column.parentNode.parentNode.id - 1;
-    let previousRow = document.getElementById(indexRow).childNodes[column]
+    let indexRow = column.parentNode.parentNode.id;
+    let previousRow = document.getElementById(indexRow - 1).childNodes[column]
       .lastChild;
     previousRow.setAttribute("src", "./img/yelow.png");
   }
