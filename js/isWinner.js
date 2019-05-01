@@ -27,7 +27,7 @@ export function isWinner(gameboard, row, col, colorPlayer) {
   for (let indexRow = row; indexRow < gameboard.length; indexRow++) {
     alignedPawns =
       gameboard[indexRow][col] === colorPlayer ? alignedPawns + 1 : 0;
-    col = col + 1;
+    col++;
     console.log(alignedPawns);
     if (alignedPawns >= 4) return true;
     console.log(col);
@@ -43,7 +43,7 @@ export function isWinner(gameboard, row, col, colorPlayer) {
     console.log(col);
     alignedPawns =
       gameboard[indexRow][col] === colorPlayer ? alignedPawns + 1 : 0;
-    col = col - 1;
+    col--;
     console.log(col);
     console.log(alignedPawns);
     if (alignedPawns >= 4) return true;
@@ -56,7 +56,7 @@ export function isWinner(gameboard, row, col, colorPlayer) {
   for (let indexRow = row; indexRow >= 0; indexRow--) {
     alignedPawns =
       gameboard[indexRow][col] === colorPlayer ? alignedPawns + 1 : 0;
-    col = col - 1;
+    col--;
     console.log(alignedPawns);
     if (alignedPawns >= 4) return true;
     if (indexRow === 0 && col < 0) {
