@@ -39,6 +39,8 @@ export function isWinner(gameboard, row, col, colorPlayer) {
     console.log(col);
     if (indexRow === lastRow && col > gameboard[indexRow].length - 1) {
       col = currentCol;
+    }
+    if (indexRow === lastRow && alignedPawns < 4) {
       alignedPawns = 0;
     }
   }
