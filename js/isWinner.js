@@ -21,6 +21,9 @@ export function isWinner(gameboard, row, col, colorPlayer) {
       gameboard[row][indexColumn] === colorPlayer ? alignedPawns + 1 : 0;
     console.log(alignedPawns);
     if (alignedPawns >= 4) return true;
+    if (indexColumn === gameboard[row].length - 1 && alignedPawns < 4) {
+      alignedPawns = 0;
+    }
   }
 
   //diagonally right down
