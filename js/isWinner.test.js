@@ -44,13 +44,13 @@ describe("isWinner", function() {
     var gameboard = [
       ["", "", "", "", "", "", ""],
       ["", "", "", "", "", "", ""],
-      ["R", "R", "", "Y", "", "", ""],
-      ["R", "R", "Y", "Y", "", "", ""],
-      ["Y", "Y", "R", "R", "", "", ""],
-      ["R", "R", "R", "Y", "", "", ""]
+      ["", "", "", "", "", "", ""],
+      ["", "", "", "", "", "", ""],
+      ["", "", "Y", "Y", "Y", "", ""],
+      ["R", "R", "R", "Y", "Y", "R", "R"]
     ];
 
-    expect(isWinner(gameboard, 2, 3, "Y")).toBe(false);
+    expect(isWinner(gameboard, 4, 4, "R")).toBe(false);
   });
 
   it("should return true if player is winner when pawns are aligned diagonally left up", function() {
@@ -64,5 +64,18 @@ describe("isWinner", function() {
     ];
 
     expect(isWinner(gameboard, 5, 4, "R")).toBe(true);
+  });
+
+  it("should return true if player is winner when pawns are aligned diagonally right down", function() {
+    var gameboard = [
+      ["", "", "", "", "", "", ""],
+      ["", "", "", "", "", "", ""],
+      ["", "Y", "", "", "", "", ""],
+      ["", "Y", "Y", "Y", "", "", ""],
+      ["R", "R", "Y", "Y", "R", "", "R"],
+      ["R", "R", "Y", "R", "Y", "R", "Y"]
+    ];
+
+    expect(isWinner(gameboard, 2, 1, "Y")).toBe(true);
   });
 });

@@ -56,11 +56,13 @@ export function addRedPawn(gameboard) {
 
   for (let indexRow = 0; indexRow < newGameboard.length; indexRow++) {
     let row = newGameboard[indexRow];
+
     if (row.includes("R")) {
       let indexPlayedRow = newGameboard.indexOf(row);
       let playedColumn = document.getElementById(indexPlayedRow).childNodes[
         randomColumn
       ].lastChild;
+
       if (
         playedColumn.src ===
         "https://nadiapoi.github.io/Puissance4/img/empty.png"
@@ -70,7 +72,6 @@ export function addRedPawn(gameboard) {
       }
     }
   }
-  console.log(newGameboard);
 }
 
 export function checkIfYellowWinner(gameboard, row, column) {

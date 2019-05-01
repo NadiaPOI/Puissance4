@@ -3,12 +3,14 @@ import { addEventListenerToColumn } from "./addEventListenerToColumn.js";
 export function initGame(boardgame) {
   let row = boardgame[0];
   let selectorTable = document.querySelector("table");
+
   // create lines
   for (let indexRow = 0; indexRow < boardgame.length; indexRow++) {
     let line = boardgame[indexRow];
     line = document.createElement("tr");
     line.setAttribute("id", indexRow);
     selectorTable.appendChild(line);
+
     // create columns
     for (let indexCol = 0; indexCol < row.length; indexCol++) {
       let col = document.createElement("td");
