@@ -57,6 +57,8 @@ export function isWinner(gameboard, row, col, colorPlayer) {
     if (alignedPawns >= 4) return true;
     if (indexRow === lastRow && col < 0) {
       col = currentCol;
+    }
+    if (indexRow === lastRow && alignedPawns < 4) {
       alignedPawns = 0;
     }
   }
