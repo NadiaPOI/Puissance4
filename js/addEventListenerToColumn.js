@@ -39,6 +39,21 @@ export function addYellowPawn(gameboard, column) {
     }
   }
 
+  if (column.src === "https://nadiapoi.github.io/Puissance4/img/empty.png") {
+    indexRow = lastRow;
+
+    while (
+      document.getElementById(indexRow).childNodes[indexColumn].lastChild
+        .src !== "https://nadiapoi.github.io/Puissance4/img/empty.png"
+    ) {
+      indexRow--;
+      let previousRow = document.getElementById(indexRow).childNodes[
+        indexColumn
+      ].lastChild;
+      column = previousRow;
+    }
+  }
+
   if (
     lastRow.childNodes[indexColumn].lastChild.src ===
     "https://nadiapoi.github.io/Puissance4/img/empty.png"
