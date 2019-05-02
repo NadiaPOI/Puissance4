@@ -1,5 +1,6 @@
 body {
   width: 100%;
+  background-color: gray;
 }
 
 h1 {
@@ -23,6 +24,6 @@ td {
 }
 
 img {
-  width: 95px;
-  height: 95px;
+  width: 80px;
+  height: 80px;
 }
