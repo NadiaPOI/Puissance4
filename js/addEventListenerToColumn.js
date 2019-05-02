@@ -39,7 +39,7 @@ export function addYellowPawn(gameboard, column) {
     }
   } else {
     while (
-      document.getElementById(lastRow).childNodes[indexColumn].lastChild.src !==
+      lastRow.childNodes[indexColumn].lastChild.src !==
         "https://nadiapoi.github.io/Puissance4/img/empty.png" &&
       lastRow > 0
     ) {
