@@ -37,7 +37,9 @@ export function addYellowPawn(gameboard, column) {
       ].lastChild;
       column = previousRow;
     }
-  } else {
+  }
+
+  if (column.src === "https://nadiapoi.github.io/Puissance4/img/empty.png") {
     while (
       lastRow.childNodes[indexColumn].lastChild.src !==
         "https://nadiapoi.github.io/Puissance4/img/empty.png" &&
@@ -92,6 +94,7 @@ export function checkIfYellowWinner(gameboard, row, column) {
   } else {
     addRedPawn(gameboard);
     checkIfRedWinner(gameboard, row, column);
+    console.log(gameboard);
   }
 }
 
