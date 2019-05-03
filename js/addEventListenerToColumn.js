@@ -28,10 +28,8 @@ export function addYellowPawn(gameboard, column) {
 
   console.log("indexRow", indexRow);
   console.log("indexCol", indexColumn);
-  if (
-    column.src !== "https://nadiapoi.github.io/Puissance4/img/empty.png" &&
-    indexRow !== 0
-  ) {
+
+  if (column.src !== "https://nadiapoi.github.io/Puissance4/img/empty.png") {
     while (
       document.getElementById(indexRow).childNodes[indexColumn].lastChild
         .src !== "https://nadiapoi.github.io/Puissance4/img/empty.png"
