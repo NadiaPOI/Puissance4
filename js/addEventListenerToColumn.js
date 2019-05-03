@@ -52,9 +52,7 @@ export function addYellowPawn(gameboard, column) {
     "https://nadiapoi.github.io/Puissance4/img/empty.png"
   ) {
     lastRow--;
-    let currentLastRow = document.getElementById(lastRow).childNodes[
-      indexColumn
-    ].lastChild;
+    let currentLastRow = lastRow.childNodes[indexColumn].lastChild;
     column = currentLastRow;
   }
 
