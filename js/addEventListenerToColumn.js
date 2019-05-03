@@ -23,19 +23,20 @@ export function addEventListenerToColumn(gameboard) {
 
 export function addYellowPawn(gameboard, column) {
   let indexRow = column.parentNode.parentNode.id;
-  let indexColumn = column.className;
-  let lastRow = document.getElementById(gameboard.length - 1);
-
   console.log("indexRow", indexRow);
+  let indexColumn = column.className;
   console.log("indexCol", indexColumn);
 
-  if (
-    column.src !== "https://nadiapoi.github.io/Puissance4/img/empty.png" &&
-    indexRow !== 0
-  ) {
+  let lastRow = document.getElementById(gameboard.length - 1);
+  indexRow = gameboard.length - 1;
+  column = lastRow.childNodes[indexColumn].lastChild;
+
+  console.log("indexRow", indexRow);
+
+  if (column.src !== "https://nadiapoi.github.io/Puissance4/img/empty.png") {
     while (
-      document.getElementById(indexRow).childNodes[indexColumn].lastChild
-        .src !== "https://nadiapoi.github.io/Puissance4/img/empty.png"
+      column.src !== "https://nadiapoi.github.io/Puissance4/img/empty.png" &&
+      indexRow !== 0
     ) {
       indexRow--;
       let previousRow = document.getElementById(indexRow).childNodes[
@@ -45,7 +46,7 @@ export function addYellowPawn(gameboard, column) {
     }
   }
 
-  column = lastRow.childNodes[indexColumn].lastChild;
+  /* column = lastRow.childNodes[indexColumn].lastChild;
 
   while (
     lastRow.childNodes[indexColumn].lastChild.src !==
@@ -54,7 +55,7 @@ export function addYellowPawn(gameboard, column) {
     lastRow--;
     let currentLastRow = lastRow.childNodes[indexColumn].lastChild;
     column = currentLastRow;
-  }
+  } */
 
   /* if (column.src === "https://nadiapoi.github.io/Puissance4/img/empty.png") {
     if (
