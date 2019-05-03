@@ -52,9 +52,10 @@ export function addYellowPawn(gameboard, column) {
       lastRow > 0
     ) {
       lastRow--;
-      let previousRow = document.getElementById(lastRow).childNodes[indexColumn]
-        .lastChild;
-      column = previousRow;
+      let currentLastRow = document.getElementById(lastRow).childNodes[
+        indexColumn
+      ].lastChild;
+      column = currentLastRow;
     }
   }
 

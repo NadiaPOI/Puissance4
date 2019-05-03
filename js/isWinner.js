@@ -1,8 +1,4 @@
-import { clearScreenDown } from "readline";
-
 export function isWinner(gameboard, row, col, colorPlayer) {
-  console.log("row", row);
-  console.log("col", col);
   let alignedPawns = 0;
   let lastRow = gameboard.length - 1;
   const currentCol = col;
