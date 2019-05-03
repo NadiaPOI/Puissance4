@@ -16,6 +16,7 @@ export function addEventListenerToColumn(gameboard) {
       let currentRow = currentColumn.parentNode.parentNode.id;
       if (yellowWinner === false && redWinner === false) {
         addYellowPawn(gameboard, currentColumn);
+        addRedPawn(gameboard);
       }
     });
   }
@@ -46,36 +47,6 @@ export function addYellowPawn(gameboard, column) {
     }
   }
 
-  /* column = lastRow.childNodes[indexColumn].lastChild;
-
-  while (
-    lastRow.childNodes[indexColumn].lastChild.src !==
-    "https://nadiapoi.github.io/Puissance4/img/empty.png"
-  ) {
-    lastRow--;
-    let currentLastRow = lastRow.childNodes[indexColumn].lastChild;
-    column = currentLastRow;
-  } */
-
-  /* if (column.src === "https://nadiapoi.github.io/Puissance4/img/empty.png") {
-    if (
-      lastRow.childNodes[indexColumn].lastChild.src ===
-      "https://nadiapoi.github.io/Puissance4/img/empty.png"
-    ) {
-      column = lastRow.childNodes[indexColumn].lastChild;
-    }
-  } else {
-    while (
-      lastRow.childNodes[indexColumn].lastChild.src !==
-      "https://nadiapoi.github.io/Puissance4/img/empty.png"
-    ) {
-      lastRow--;
-      let currentLastRow = document.getElementById(lastRow).childNodes[
-        indexColumn
-      ].lastChild;
-      column = currentLastRow;
-    }
-  } */
   column.setAttribute("src", "./img/yellow.png");
   addPawn(gameboard, indexColumn, "Y");
   checkIfYellowWinner(gameboard, indexRow, indexColumn);
@@ -83,6 +54,7 @@ export function addYellowPawn(gameboard, column) {
 
 export function addRedPawn(gameboard) {
   let randomColumn = findEmptyColumn(gameboard, randomFunction);
+  console.log("redCol", randomColumn);
   let newGameboard = turnOfPlayAI(gameboard, randomColumn);
 
   for (let indexRow = 0; indexRow < newGameboard.length; indexRow++) {
@@ -90,6 +62,7 @@ export function addRedPawn(gameboard) {
 
     if (row.includes("R")) {
       let indexPlayedRow = newGameboard.indexOf(row);
+      console.log("indexPlayedRow", indexPlayedRow);
       let playedColumn = document.getElementById(indexPlayedRow).childNodes[
         randomColumn
       ].lastChild;
@@ -109,10 +82,6 @@ export function checkIfYellowWinner(gameboard, row, column) {
   if (isWinner(gameboard, row, column, "Y") === true) {
     yellowWinner = true;
     console.log("Yellow player win ;-)");
-  } else {
-    addRedPawn(gameboard);
-    checkIfRedWinner(gameboard, row, column);
-    console.log(gameboard);
   }
 }
 
