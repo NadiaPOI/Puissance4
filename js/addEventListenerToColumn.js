@@ -29,7 +29,10 @@ export function addYellowPawn(gameboard, column) {
   console.log("indexRow", indexRow);
   console.log("indexCol", indexColumn);
 
-  if (column.src !== "https://nadiapoi.github.io/Puissance4/img/empty.png") {
+  if (
+    column.src !== "https://nadiapoi.github.io/Puissance4/img/empty.png" &&
+    indexRow !== 0
+  ) {
     while (
       document.getElementById(indexRow).childNodes[indexColumn].lastChild
         .src !== "https://nadiapoi.github.io/Puissance4/img/empty.png"
@@ -42,7 +45,16 @@ export function addYellowPawn(gameboard, column) {
     }
   }
 
-  if (column.src === "https://nadiapoi.github.io/Puissance4/img/empty.png") {
+  column = lastRow.childNodes[indexColumn].lastChild;
+
+  while (
+    lastRow.childNodes[indexColumn].lastChild.src !==
+    "https://nadiapoi.github.io/Puissance4/img/empty.png"
+  ) {
+    lastRow--;
+  }
+
+  /* if (column.src === "https://nadiapoi.github.io/Puissance4/img/empty.png") {
     if (
       lastRow.childNodes[indexColumn].lastChild.src ===
       "https://nadiapoi.github.io/Puissance4/img/empty.png"
@@ -60,7 +72,7 @@ export function addYellowPawn(gameboard, column) {
       ].lastChild;
       column = currentLastRow;
     }
-  }
+  } */
   column.setAttribute("src", "./img/yellow.png");
   addPawn(gameboard, indexColumn, "Y");
   checkIfYellowWinner(gameboard, indexRow, indexColumn);
