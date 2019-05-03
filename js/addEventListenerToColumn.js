@@ -42,14 +42,17 @@ export function addYellowPawn(gameboard, column) {
     }
   }
 
-  if (
-    lastRow.childNodes[indexColumn].lastChild.src !==
-    "https://nadiapoi.github.io/Puissance4/img/empty.png"
-  ) {
+  if (column.src === "https://nadiapoi.github.io/Puissance4/img/empty.png") {
+    if (
+      lastRow.childNodes[indexColumn].lastChild.src ===
+      "https://nadiapoi.github.io/Puissance4/img/empty.png"
+    ) {
+      column = lastRow.childNodes[indexColumn].lastChild;
+    }
+  } else {
     while (
       lastRow.childNodes[indexColumn].lastChild.src !==
-        "https://nadiapoi.github.io/Puissance4/img/empty.png" &&
-      lastRow > 0
+      "https://nadiapoi.github.io/Puissance4/img/empty.png"
     ) {
       lastRow--;
       let currentLastRow = document.getElementById(lastRow).childNodes[
@@ -57,13 +60,6 @@ export function addYellowPawn(gameboard, column) {
       ].lastChild;
       column = currentLastRow;
     }
-  }
-
-  if (
-    lastRow.childNodes[indexColumn].lastChild.src ===
-    "https://nadiapoi.github.io/Puissance4/img/empty.png"
-  ) {
-    column = lastRow.childNodes[indexColumn].lastChild;
   }
   column.setAttribute("src", "./img/yellow.png");
   addPawn(gameboard, indexColumn, "Y");
