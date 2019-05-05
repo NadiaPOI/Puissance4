@@ -72,7 +72,7 @@ export function addRedPawn(gameboard) {
         "https://nadiapoi.github.io/Puissance4/img/empty.png"
       ) {
         playedColumn.setAttribute("src", "./img/red.png");
-        checkIfRedWinner(gameboard, indexPlayedRow, playedColumn);
+        checkIfRedWinner(gameboard, indexPlayedRow, randomColumn);
       }
     }
   }
