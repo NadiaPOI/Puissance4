@@ -11,12 +11,15 @@ export function addEventListenerToColumn(gameboard) {
 
   for (let position = 0; position < positions.length; position++) {
     const column = positions[position];
+
     column.addEventListener("click", function(event) {
       let currentColumn = event.target;
-      let currentRow = currentColumn.parentNode.parentNode.id;
+
       if (yellowWinner === false && redWinner === false) {
         addYellowPawn(gameboard, currentColumn);
-        addRedPawn(gameboard);
+        if (yellowWinner === false) {
+          addRedPawn(gameboard);
+        }
       }
     });
   }
@@ -24,15 +27,10 @@ export function addEventListenerToColumn(gameboard) {
 
 export function addYellowPawn(gameboard, column) {
   let indexRow = column.parentNode.parentNode.id;
-  console.log("indexRow", indexRow);
   let indexColumn = column.className;
-  console.log("indexCol", indexColumn);
-
   let lastRow = document.getElementById(gameboard.length - 1);
   indexRow = gameboard.length - 1;
   column = lastRow.childNodes[indexColumn].lastChild;
-
-  console.log("indexRow", indexRow);
 
   if (column.src !== "https://nadiapoi.github.io/Puissance4/img/empty.png") {
     while (
@@ -46,7 +44,6 @@ export function addYellowPawn(gameboard, column) {
       column = previousRow;
     }
   }
-
   column.setAttribute("src", "./img/yellow.png");
   addPawn(gameboard, indexColumn, "Y");
   checkIfYellowWinner(gameboard, indexRow, indexColumn);
@@ -54,7 +51,6 @@ export function addYellowPawn(gameboard, column) {
 
 export function addRedPawn(gameboard) {
   let randomColumn = findEmptyColumn(gameboard, randomFunction);
-  console.log("redCol", randomColumn);
   let newGameboard = turnOfPlayAI(gameboard, randomColumn);
 
   for (let indexRow = 0; indexRow < newGameboard.length; indexRow++) {
@@ -62,7 +58,6 @@ export function addRedPawn(gameboard) {
 
     if (row.includes("R")) {
       let indexPlayedRow = newGameboard.indexOf(row);
-      console.log("indexPlayedRow", indexPlayedRow);
       let playedColumn = document.getElementById(indexPlayedRow).childNodes[
         randomColumn
       ].lastChild;
