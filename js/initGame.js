@@ -18,5 +18,4 @@ export function initGame(boardgame) {
       line.appendChild(col);
     }
   }
-  return selectorTable;
 }

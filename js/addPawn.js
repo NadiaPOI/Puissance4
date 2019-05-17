@@ -1,5 +1,3 @@
-import { generateGameboard } from "./generateGameboard.js";
-
 export function addPawn(gameboard, column, colorPlayer) {
   let lastRow = gameboard.length - 1;
 
