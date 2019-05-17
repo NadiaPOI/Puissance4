@@ -1,4 +1,4 @@
-import { isWinner } from "./isWinner";
+import { isWinner } from "./isWinner.js";
 
 export function checkIfYellowWinner(gameboard, row, column) {
   let yellowWinner = false;

@@ -1,5 +1,3 @@
-import { addEventListenerToColumn } from "./addEventListenerToColumn.js";
-
 export function initGame(boardgame) {
   let selectorTable = document.getElementById("gameboard");
 
