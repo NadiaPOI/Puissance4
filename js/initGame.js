@@ -1,8 +1,7 @@
 import { addEventListenerToColumn } from "./addEventListenerToColumn.js";
 
 export function initGame(boardgame) {
-  let row = boardgame[0];
-  let selectorTable = document.querySelector("table");
+  let selectorTable = document.getElementById("gameboard");
 
   // create lines
   for (let indexRow = 0; indexRow < boardgame.length; indexRow++) {
@@ -12,7 +11,7 @@ export function initGame(boardgame) {
     selectorTable.appendChild(line);
 
     // create columns
-    for (let indexCol = 0; indexCol < row.length; indexCol++) {
+    for (let indexCol = 0; indexCol < boardgame[indexRow].length; indexCol++) {
       let col = document.createElement("td");
       let emptyPosition = document.createElement("img");
       emptyPosition.setAttribute("src", "./img/empty.png");
@@ -21,5 +20,5 @@ export function initGame(boardgame) {
       line.appendChild(col);
     }
   }
-  addEventListenerToColumn(boardgame);
+  return selectorTable;
 }
