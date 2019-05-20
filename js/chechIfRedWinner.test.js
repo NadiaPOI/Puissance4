@@ -11,6 +11,6 @@ describe("checkIfRedWinner", () => {
       ["Y", "R", "R", "R", "R", "Y", ""]
     ];
 
-    expect(checkIfRedWinner(gameboard, 5, 2)).toMatch("Red player win ;-)");
+    expect(checkIfRedWinner(gameboard, 5, 2)).toBe(true);
   });
 });

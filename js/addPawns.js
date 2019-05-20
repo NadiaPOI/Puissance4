@@ -32,7 +32,10 @@ export function addYellowPawn(gameboard, column) {
 
   column.setAttribute("src", "./img/yellow.png");
   addPawn(gameboard, indexColumn, "Y");
-  checkIfYellowWinner(gameboard, indexRow, indexColumn);
+  yellowWinner =
+    checkIfYellowWinner(gameboard, indexRow, indexColumn, yellowWinner) === true
+      ? true
+      : false;
 }
 
 export function addRedPawn(gameboard) {
@@ -50,7 +53,15 @@ export function addRedPawn(gameboard) {
 
       if (playedColumn.getAttribute("src") === "./img/empty.png") {
         playedColumn.setAttribute("src", "./img/red.png");
-        checkIfRedWinner(gameboard, indexPlayedRow, randomColumn);
+        redWinner =
+          checkIfRedWinner(
+            gameboard,
+            indexPlayedRow,
+            randomColumn,
+            redWinner
+          ) === true
+            ? true
+            : false;
       }
     }
   }
