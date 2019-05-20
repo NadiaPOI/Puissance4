@@ -11,8 +11,6 @@ describe("checkIfYellowWinner", () => {
       ["Y", "R", "", "", "R", "R", ""]
     ];
 
-    expect(checkIfYellowWinner(gameboard, 2, 0)).toMatch(
-      "Yellow player win ;-)"
-    );
+    expect(checkIfYellowWinner(gameboard, 2, 0)).toBe(true);
   });
 });
