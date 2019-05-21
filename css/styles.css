@@ -29,7 +29,7 @@ img {
 }
 
 #displayWinner {
-  border: 1px solid black;
+  border: 2px solid black;
   box-shadow: 2px 2px black;
   width: 30%;
   margin: auto;
@@ -38,4 +38,11 @@ img {
   top: 50%;
   right: 34%;
   display: none;
+}
+
+#displayWinner p {
+  text-align: center;
+  color: #002ae0;
+  font-weight: bold;
+  font-size: large;
 }
