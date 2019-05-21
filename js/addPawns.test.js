@@ -94,7 +94,6 @@ describe("addPawns", () => {
     ).firstChild;
     addPawns(clickedColumn5, gameboard);
 
-    console.log(document.body.innerHTML);
     expect(clickedColumn5.src).toBe("http://localhost/img/empty.png");
   });
 });

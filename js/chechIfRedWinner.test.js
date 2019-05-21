@@ -16,5 +16,8 @@ describe("checkIfRedWinner", () => {
     expect(document.getElementById("displayWinner").innerHTML).toEqual(
       "<p>Great !! Red player win !</p>"
     );
+    expect(document.getElementById("displayWinner").style.display).toBe(
+      "block"
+    );
   });
 });
