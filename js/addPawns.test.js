@@ -1,5 +1,6 @@
 import { initGame } from "./initGame";
-import { addPawns } from "./addPawns";
+import { addPawns, addRedPawn } from "./addPawns";
+import { checkIfYellowWinner } from "./checkIfYellowWinner";
 
 describe("addPawns", () => {
   it("should add yellow pawn at the last row then add red pawn", () => {
@@ -50,8 +51,11 @@ describe("addPawns", () => {
     expect(previousColumn.src).toBe("http://localhost/img/yellow.png");
   });
 
-  it("should not add red pawn when red player win", () => {
-    document.body.innerHTML = '<table id="gameboard"></table>';
+  it("should not could add pawn when yellow player win", () => {
+    document.body.innerHTML =
+      '<section id="displayWinner"></section>' +
+      '<table id="gameboard"><tr id="0"></table>';
+
     let gameboard = [
       ["", "", "", "", "", "", ""],
       ["", "", "", "", "", "", ""],
@@ -63,25 +67,34 @@ describe("addPawns", () => {
 
     initGame(gameboard);
 
-    let firstColumn = document.querySelector("tr:nth-child(6) td:nth-child(1)")
-      .firstChild;
-    let previousColumn = document.querySelector(
+    let clickedColumn = document.querySelector(
+      "tr:nth-child(6) td:nth-child(1)"
+    ).firstChild;
+    addPawns(clickedColumn, gameboard);
+
+    let clickedColumn2 = document.querySelector(
       "tr:nth-child(5) td:nth-child(1)"
     ).firstChild;
-    let thirdColumn = document.querySelector("tr:nth-child(4) td:nth-child(1)")
-      .firstChild;
+    addPawns(clickedColumn2, gameboard);
 
-    let fourthColumn = document.querySelector("tr:nth-child(3) td:nth-child(1)")
-      .firstChild;
-    let columnClicked = document.querySelector(
+    let clickedColumn3 = document.querySelector(
+      "tr:nth-child(4) td:nth-child(1)"
+    ).firstChild;
+    addPawns(clickedColumn3, gameboard);
+
+    let clickedColumn4 = document.querySelector(
+      "tr:nth-child(3) td:nth-child(1)"
+    ).firstChild;
+    addPawns(clickedColumn4, gameboard);
+
+    checkIfYellowWinner(gameboard, 2, 0, false);
+
+    let clickedColumn5 = document.querySelector(
       "tr:nth-child(2) td:nth-child(1)"
     ).firstChild;
-    addPawns(firstColumn, gameboard);
-    addPawns(previousColumn, gameboard);
-    addPawns(thirdColumn, gameboard);
-    addPawns(fourthColumn, gameboard);
-    addPawns(columnClicked, gameboard);
+    addPawns(clickedColumn5, gameboard);
 
-    expect(columnClicked.src).not.toBe("http://localhost/img/yellow.png");
+    console.log(document.body.innerHTML);
+    expect(clickedColumn5.src).toBe("http://localhost/img/empty.png");
   });
 });
