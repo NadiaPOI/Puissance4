@@ -29,6 +29,13 @@ img {
 }
 
 #displayWinner {
-  border: 3px solid black;
-  box-shadow: 3px black;
+  border: 1px solid black;
+  box-shadow: 2px 2px black;
+  width: 30%;
+  margin: auto;
+  background-color: white;
+  position: absolute;
+  top: 50%;
+  right: 34%;
+  display: none;
 }

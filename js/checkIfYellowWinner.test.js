@@ -17,5 +17,8 @@ describe("checkIfYellowWinner", () => {
     expect(document.getElementById("displayWinner").innerHTML).toEqual(
       "<p>Great !! Yellow player win !</p>"
     );
+    expect(document.getElementById("displayWinner").style.display).toBe(
+      "block"
+    );
   });
 });
