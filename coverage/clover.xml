@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1558344747827" clover="3.2.0">
-  <project timestamp="1558344747827" name="All files">
-    <metrics statements="121" coveredstatements="120" conditionals="82" coveredconditionals="78" methods="13" coveredmethods="13" elements="216" coveredelements="211" complexity="0" loc="121" ncloc="121" packages="1" files="9" classes="9"/>
+<coverage generated="1558422619980" clover="3.2.0">
+  <project timestamp="1558422619981" name="All files">
+    <metrics statements="123" coveredstatements="122" conditionals="82" coveredconditionals="78" methods="13" coveredmethods="13" elements="218" coveredelements="213" complexity="0" loc="123" ncloc="123" packages="1" files="9" classes="9"/>
     <file name="addEventListenerToColumn.js" path="C:\Users\nadia\Projets\Puissance4Js\js\addEventListenerToColumn.js">
       <metrics statements="6" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
       <line num="2" count="1" type="stmt"/>
@@ -55,18 +55,20 @@
       <line num="56" count="6" type="stmt"/>
     </file>
     <file name="checkIfRedWinner.js" path="C:\Users\nadia\Projets\Puissance4Js\js\checkIfRedWinner.js">
-      <metrics statements="4" coveredstatements="4" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
+      <metrics statements="5" coveredstatements="5" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
       <line num="4" count="7" type="cond" truecount="2" falsecount="0"/>
       <line num="5" count="1" type="stmt"/>
       <line num="6" count="1" type="stmt"/>
-      <line num="8" count="7" type="stmt"/>
+      <line num="7" count="1" type="stmt"/>
+      <line num="10" count="7" type="stmt"/>
     </file>
     <file name="checkIfYellowWinner.js" path="C:\Users\nadia\Projets\Puissance4Js\js\checkIfYellowWinner.js">
-      <metrics statements="4" coveredstatements="4" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
-      <line num="4" count="8" type="cond" truecount="2" falsecount="0"/>
-      <line num="5" count="2" type="stmt"/>
-      <line num="6" count="2" type="stmt"/>
-      <line num="8" count="8" type="stmt"/>
+      <metrics statements="5" coveredstatements="5" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
+      <line num="4" count="9" type="cond" truecount="2" falsecount="0"/>
+      <line num="5" count="3" type="stmt"/>
+      <line num="6" count="3" type="stmt"/>
+      <line num="7" count="3" type="stmt"/>
+      <line num="10" count="9" type="stmt"/>
     </file>
     <file name="generateGameboard.js" path="C:\Users\nadia\Projets\Puissance4Js\js\generateGameboard.js">
       <metrics statements="9" coveredstatements="9" conditionals="4" coveredconditionals="4" methods="1" coveredmethods="1"/>
@@ -98,13 +100,13 @@
     </file>
     <file name="isWinner.js" path="C:\Users\nadia\Projets\Puissance4Js\js\isWinner.js">
       <metrics statements="37" coveredstatements="36" conditionals="48" coveredconditionals="47" methods="1" coveredmethods="1"/>
-      <line num="2" count="21" type="stmt"/>
-      <line num="3" count="21" type="stmt"/>
-      <line num="4" count="21" type="stmt"/>
-      <line num="7" count="21" type="stmt"/>
-      <line num="8" count="120" type="stmt"/>
-      <line num="10" count="120" type="cond" truecount="2" falsecount="0"/>
-      <line num="11" count="117" type="cond" truecount="4" falsecount="0"/>
+      <line num="2" count="22" type="stmt"/>
+      <line num="3" count="22" type="stmt"/>
+      <line num="4" count="22" type="stmt"/>
+      <line num="7" count="22" type="stmt"/>
+      <line num="8" count="124" type="stmt"/>
+      <line num="10" count="124" type="cond" truecount="2" falsecount="0"/>
+      <line num="11" count="120" type="cond" truecount="4" falsecount="0"/>
       <line num="12" count="18" type="stmt"/>
       <line num="17" count="18" type="stmt"/>
       <line num="18" count="18" type="stmt"/>

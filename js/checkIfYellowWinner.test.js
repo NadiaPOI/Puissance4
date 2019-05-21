@@ -11,6 +11,11 @@ describe("checkIfYellowWinner", () => {
       ["Y", "R", "", "", "R", "R", ""]
     ];
 
+    document.body.innerHTML = '<section id="displayWinner"></section>';
+
     expect(checkIfYellowWinner(gameboard, 2, 0)).toBe(true);
+    expect(document.getElementById("displayWinner").innerHTML).toEqual(
+      "<p>Great !! Yellow player win !</p>"
+    );
   });
 });
