@@ -7,7 +7,8 @@
     "test": "jest --coverage",
     "tdd": "jest --watch",
     "start": "browser-sync start",
-    "dev": "browser-sync start --server --files js/*.js, css/*.css, index.html"
+    "dev": "browser-sync start --server --files js/*.js, css/*.css, index.html",
+    "lint": "eslint **/*.js"
   },
   "repository": {
     "type": "git",
@@ -24,6 +25,10 @@
     "babel-core": "^6.26.3",
     "babel-preset-env": "^1.7.0",
     "browser-sync": "^2.26.3",
+    "eslint": "^4.19.1",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-jest": "^22.6.4",
     "jest": "^24.5.0"
   }
 }
