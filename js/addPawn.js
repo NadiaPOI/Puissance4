@@ -1,18 +1,20 @@
 export function addPawn(gameboard, column, colorPlayer) {
   let lastRow = gameboard.length - 1;
+  let board = gameboard;
 
-  if (!gameboard[0].includes("")) {
-    throw new Error("The gameboard is full");
+  if (!board[0].includes('')) {
+    throw new Error('The gameboard is full');
   }
 
-  if (gameboard[0][column] !== "") {
-    throw new Error("The column is full");
+  if (board[0][column] !== '') {
+    throw new Error('The column is full');
   }
 
-  while (gameboard[lastRow][column] !== "" && lastRow > 0) {
-    lastRow--;
+  while (board[lastRow][column] !== '' && lastRow > 0) {
+    lastRow -= 1;
   }
-  gameboard[lastRow][column] = colorPlayer;
 
-  return gameboard;
+  board[lastRow][column] = colorPlayer;
+
+  return board;
 }
