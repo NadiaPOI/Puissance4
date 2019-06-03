@@ -50,3 +50,4 @@ I use github-pages to host this project. All you need to do is to push your buil
 Verify the deployment by navigating to your server address in your preferred browser.
 
 The demo of this website is hosted at https://nadiapoi.github.io/Puissance4/.
+
