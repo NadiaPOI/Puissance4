@@ -15,7 +15,7 @@ describe('checkIfYellowWinner', () => {
 
     expect(checkIfYellowWinner(gameboard, 2, 0)).toBe(true);
     expect(document.getElementById('displayWinner').innerHTML).toEqual(
-      '<p>Great !! Yellow player win !</p>'
+      '<p>Great !! Yellow player win !</p><button id="restart">Start again</button>'
     );
     expect(document.getElementById('displayWinner').style.display).toBe(
       'block'

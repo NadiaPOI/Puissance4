@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1558685524600" clover="3.2.0">
-  <project timestamp="1558685524600" name="All files">
-    <metrics statements="127" coveredstatements="127" conditionals="78" coveredconditionals="76" methods="13" coveredmethods="13" elements="218" coveredelements="216" complexity="0" loc="127" ncloc="127" packages="1" files="9" classes="9"/>
+<coverage generated="1559650768843" clover="3.2.0">
+  <project timestamp="1559650768843" name="All files">
+    <metrics statements="135" coveredstatements="135" conditionals="78" coveredconditionals="76" methods="15" coveredmethods="15" elements="228" coveredelements="226" complexity="0" loc="135" ncloc="135" packages="1" files="10" classes="10"/>
     <file name="addEventListenerToColumn.js" path="C:\Users\nadia\Projets\Puissance4Js\js\addEventListenerToColumn.js">
       <metrics statements="6" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
       <line num="2" count="1" type="stmt"/>
@@ -57,22 +57,24 @@
       <line num="59" count="6" type="stmt"/>
     </file>
     <file name="checkIfRedWinner.js" path="C:\Users\nadia\Projets\Puissance4Js\js\checkIfRedWinner.js">
-      <metrics statements="6" coveredstatements="6" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
-      <line num="4" count="7" type="stmt"/>
-      <line num="5" count="7" type="cond" truecount="2" falsecount="0"/>
-      <line num="6" count="1" type="stmt"/>
+      <metrics statements="7" coveredstatements="7" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
+      <line num="5" count="7" type="stmt"/>
+      <line num="6" count="7" type="cond" truecount="2" falsecount="0"/>
       <line num="7" count="1" type="stmt"/>
       <line num="8" count="1" type="stmt"/>
-      <line num="10" count="7" type="stmt"/>
+      <line num="9" count="1" type="stmt"/>
+      <line num="10" count="1" type="stmt"/>
+      <line num="12" count="7" type="stmt"/>
     </file>
     <file name="checkIfYellowWinner.js" path="C:\Users\nadia\Projets\Puissance4Js\js\checkIfYellowWinner.js">
-      <metrics statements="6" coveredstatements="6" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
-      <line num="4" count="9" type="stmt"/>
-      <line num="5" count="9" type="cond" truecount="2" falsecount="0"/>
-      <line num="6" count="3" type="stmt"/>
+      <metrics statements="7" coveredstatements="7" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
+      <line num="5" count="9" type="stmt"/>
+      <line num="6" count="9" type="cond" truecount="2" falsecount="0"/>
       <line num="7" count="3" type="stmt"/>
       <line num="8" count="3" type="stmt"/>
-      <line num="10" count="9" type="stmt"/>
+      <line num="9" count="3" type="stmt"/>
+      <line num="10" count="3" type="stmt"/>
+      <line num="12" count="9" type="stmt"/>
     </file>
     <file name="generateGameboard.js" path="C:\Users\nadia\Projets\Puissance4Js\js\generateGameboard.js">
       <metrics statements="9" coveredstatements="9" conditionals="4" coveredconditionals="4" methods="1" coveredmethods="1"/>
@@ -85,6 +87,15 @@
       <line num="11" count="15" type="stmt"/>
       <line num="12" count="71" type="stmt"/>
       <line num="16" count="4" type="stmt"/>
+    </file>
+    <file name="getNewBoard.js" path="C:\Users\nadia\Projets\Puissance4Js\js\getNewBoard.js">
+      <metrics statements="6" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+      <line num="2" count="5" type="stmt"/>
+      <line num="3" count="5" type="stmt"/>
+      <line num="4" count="5" type="stmt"/>
+      <line num="5" count="5" type="stmt"/>
+      <line num="6" count="5" type="stmt"/>
+      <line num="7" count="1" type="stmt"/>
     </file>
     <file name="initGame.js" path="C:\Users\nadia\Projets\Puissance4Js\js\initGame.js">
       <metrics statements="13" coveredstatements="13" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>

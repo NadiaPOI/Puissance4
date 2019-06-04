@@ -1,4 +1,5 @@
 import { isWinner } from './isWinner.js';
+import { getNewBoard } from './getNewBoard.js';
 
 export function checkIfYellowWinner(gameboard, row, column, yellowWinner) {
   let winner = yellowWinner;
@@ -6,6 +7,7 @@ export function checkIfYellowWinner(gameboard, row, column, yellowWinner) {
     winner = true;
     document.getElementById('displayWinner').innerHTML = '<p>Great !! Yellow player win !</p>';
     document.getElementById('displayWinner').style.display = 'block';
+    getNewBoard();
   }
   return winner;
 }
