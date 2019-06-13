@@ -1,9 +1,8 @@
-import { initGame } from './initGame';
-import { addEventListenerToColumn } from './addEventListenerToColumn';
+import { initGame } from './initGame.controller';
+import { addEventListenerToColumn } from './addEventListenerToColumn.controller';
 
 describe('addEventListenerToColumn', function () {
   it('should call addPawns when column is clicked', function () {
-    document.body.innerHTML = '<table id="gameboard"></table>';
     let gameboard = [
       ['', '', '', '', '', '', ''],
       ['', '', '', '', '', '', ''],
