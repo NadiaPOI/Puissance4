@@ -4,6 +4,7 @@ export function turnOfPlayAI(gameboard, randomColumn) {
   return addPawn(gameboard, randomColumn, 'R');
 }
 
+// eslint-disable-next-line consistent-return
 export function findEmptyColumn(gameboard, randomFunction) {
   /* let emptiesColumns = [];
   for (let indexRow = gameboard.length - 1; indexRow >= 0; indexRow--) {

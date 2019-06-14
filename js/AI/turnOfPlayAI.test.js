@@ -1,4 +1,4 @@
-import { turnOfPlayAI, findEmptyColumn } from './turnOfPlayAI.js';
+import { turnOfPlayAI, findEmptyColumn } from './turnOfPlayAI.logic';
 
 describe('turnOfPlayAI', function () {
   it('should add a red pawn to a random column when column is empty', function () {
