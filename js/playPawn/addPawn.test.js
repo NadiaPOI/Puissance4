@@ -1,4 +1,4 @@
-import { addPawn } from './addPawn.js';
+import { addPawn } from './addPawn.logic';
 
 describe('addPawn', function () {
   it('should add a yellow pawn to column 6 when gameboard is empty', function () {
