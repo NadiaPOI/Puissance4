@@ -1,5 +1,5 @@
 export function generateGameboard(lengthRow, lengthColumn) {
-  if (lengthRow < 0 || lengthColumn < 0) {
+  /* if (lengthRow < 0 || lengthColumn < 0) {
     throw new Error('Invalid parameters');
   }
 
@@ -13,5 +13,10 @@ export function generateGameboard(lengthRow, lengthColumn) {
     }
   }
 
-  return tabRow;
+  return tabRow; */
+
+  let gameboard = new Array(lengthRow).fill(null).map(
+    () => (new Array(lengthColumn).fill(''))
+  );
+  return gameboard;
 }

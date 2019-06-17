@@ -1,6 +1,6 @@
-import { initGame } from './initGame';
-import { addPawns } from './addPawns';
-import { checkIfYellowWinner } from './checkIfYellowWinner';
+import { initGame } from '../gameboard/initGame.controller';
+import { addPawns } from './addPawns.controller';
+import { checkIfWinner } from '../winner/checkIfWinner.controller';
 
 describe('addPawns', () => {
   it('should add yellow pawn at the last row then add red pawn', () => {
@@ -86,7 +86,7 @@ describe('addPawns', () => {
     ).firstChild;
     addPawns(clickedColumn4, gameboard);
 
-    checkIfYellowWinner(gameboard, 2, 0, false);
+    checkIfWinner(gameboard, 2, 0, 'Y');
 
     let clickedColumn5 = document.querySelector(
       'tr:nth-child(2) td:nth-child(1)'

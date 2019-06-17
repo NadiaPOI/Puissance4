@@ -1,6 +1,6 @@
 /* eslint-disable no-restricted-syntax */
 /* eslint-disable guard-for-in */
-import { generateGameboard } from './generateGameboard.js';
+import { generateGameboard } from './generateGameboard.logic';
 
 describe('generateGameboard', function () {
   it('should return a gameboard with 6 rows and 7 columns', function () {

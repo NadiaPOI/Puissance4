@@ -11,6 +11,7 @@
     "func-names": ["error", "never"],
     "no-param-reassign": ["error", { "props": true }],
     "no-plusplus": ["error", { "allowForLoopAfterthoughts": true }],
+    "no-console": "off",
     "linebreak-style": 0
   },
   "parserOptions": {

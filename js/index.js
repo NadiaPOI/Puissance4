@@ -1,9 +1,4 @@
-import { generateGameboard } from './generateGameboard.js';
-import { initGame } from './initGame.js';
-import { addEventListenerToColumn } from './addEventListenerToColumn.js';
-import { addPawns } from './addPawns.js';
+import { submitLengthGameboard } from './gameboard/submitLengthGameboard.controller.js';
 
-let gameboard = generateGameboard(6, 7);
-
-initGame(gameboard);
-addEventListenerToColumn(gameboard, addPawns);
+let startButton = document.getElementById('start');
+startButton.addEventListener('click', submitLengthGameboard);

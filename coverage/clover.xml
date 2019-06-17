@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<<<<<<< HEAD
 <coverage generated="1559650768843" clover="3.2.0">
   <project timestamp="1559650768843" name="All files">
     <metrics statements="135" coveredstatements="135" conditionals="78" coveredconditionals="76" methods="15" coveredmethods="15" elements="228" coveredelements="226" complexity="0" loc="135" ncloc="135" packages="1" files="10" classes="10"/>
@@ -167,5 +168,171 @@
       <line num="20" count="10" type="stmt"/>
       <line num="21" count="10" type="stmt"/>
     </file>
+=======
+<coverage generated="1560499659978" clover="3.2.0">
+  <project timestamp="1560499659978" name="All files">
+    <metrics statements="119" coveredstatements="119" conditionals="72" coveredconditionals="71" methods="24" coveredmethods="24" elements="215" coveredelements="214" complexity="0" loc="119" ncloc="119" packages="4" files="10" classes="10"/>
+    <package name="AI">
+      <metrics statements="9" coveredstatements="9" conditionals="2" coveredconditionals="2" methods="5" coveredmethods="5"/>
+      <file name="turnOfPlayAI.logic.js" path="C:\Users\nadia\Projets\Puissance4Js\js\AI\turnOfPlayAI.logic.js">
+        <metrics statements="9" coveredstatements="9" conditionals="2" coveredconditionals="2" methods="5" coveredmethods="5"/>
+        <line num="4" count="10" type="stmt"/>
+        <line num="23" count="60" type="stmt"/>
+        <line num="24" count="10" type="stmt"/>
+        <line num="26" count="10" type="stmt"/>
+        <line num="27" count="70" type="cond" truecount="2" falsecount="0"/>
+        <line num="28" count="20" type="stmt"/>
+        <line num="29" count="70" type="stmt"/>
+        <line num="31" count="10" type="stmt"/>
+        <line num="32" count="10" type="stmt"/>
+      </file>
+    </package>
+    <package name="gameboard">
+      <metrics statements="35" coveredstatements="35" conditionals="0" coveredconditionals="0" methods="11" coveredmethods="11"/>
+      <file name="addEventListenerToColumn.controller.js" path="C:\Users\nadia\Projets\Puissance4Js\js\gameboard\addEventListenerToColumn.controller.js">
+        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+        <line num="2" count="2" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+      </file>
+      <file name="generateGameboard.logic.js" path="C:\Users\nadia\Projets\Puissance4Js\js\gameboard\generateGameboard.logic.js">
+        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+        <line num="18" count="6" type="stmt"/>
+        <line num="19" count="21" type="stmt"/>
+        <line num="21" count="5" type="stmt"/>
+      </file>
+      <file name="initGame.controller.js" path="C:\Users\nadia\Projets\Puissance4Js\js\gameboard\initGame.controller.js">
+        <metrics statements="15" coveredstatements="15" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
+        <line num="2" count="6" type="stmt"/>
+        <line num="3" count="6" type="stmt"/>
+        <line num="4" count="6" type="stmt"/>
+        <line num="7" count="6" type="stmt"/>
+        <line num="8" count="36" type="stmt"/>
+        <line num="9" count="36" type="stmt"/>
+        <line num="10" count="36" type="stmt"/>
+        <line num="12" count="36" type="stmt"/>
+        <line num="13" count="252" type="stmt"/>
+        <line num="14" count="252" type="stmt"/>
+        <line num="15" count="252" type="stmt"/>
+        <line num="16" count="252" type="stmt"/>
+        <line num="17" count="252" type="stmt"/>
+        <line num="18" count="252" type="stmt"/>
+        <line num="22" count="6" type="stmt"/>
+      </file>
+      <file name="restartGame.controller.js" path="C:\Users\nadia\Projets\Puissance4Js\js\gameboard\restartGame.controller.js">
+        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+        <line num="4" count="7" type="stmt"/>
+        <line num="5" count="7" type="stmt"/>
+        <line num="6" count="1" type="stmt"/>
+      </file>
+      <file name="submitLengthGameboard.controller.js" path="C:\Users\nadia\Projets\Puissance4Js\js\gameboard\submitLengthGameboard.controller.js">
+        <metrics statements="11" coveredstatements="11" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+        <line num="7" count="1" type="stmt"/>
+        <line num="8" count="1" type="stmt"/>
+        <line num="9" count="1" type="stmt"/>
+        <line num="11" count="1" type="stmt"/>
+        <line num="12" count="1" type="stmt"/>
+        <line num="13" count="1" type="stmt"/>
+        <line num="14" count="1" type="stmt"/>
+        <line num="15" count="1" type="stmt"/>
+        <line num="16" count="1" type="stmt"/>
+        <line num="18" count="1" type="stmt"/>
+        <line num="19" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="playPawn">
+      <metrics statements="36" coveredstatements="36" conditionals="18" coveredconditionals="17" methods="6" coveredmethods="6"/>
+      <file name="addPawn.logic.js" path="C:\Users\nadia\Projets\Puissance4Js\js\playPawn\addPawn.logic.js">
+        <metrics statements="8" coveredstatements="8" conditionals="6" coveredconditionals="6" methods="2" coveredmethods="2"/>
+        <line num="2" count="26" type="cond" truecount="2" falsecount="0"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="6" count="25" type="cond" truecount="2" falsecount="0"/>
+        <line num="7" count="1" type="stmt"/>
+        <line num="16" count="144" type="cond" truecount="2" falsecount="0"/>
+        <line num="17" count="24" type="stmt"/>
+        <line num="18" count="24" type="stmt"/>
+        <line num="20" count="24" type="stmt"/>
+      </file>
+      <file name="addPawns.controller.js" path="C:\Users\nadia\Projets\Puissance4Js\js\playPawn\addPawns.controller.js">
+        <metrics statements="28" coveredstatements="28" conditionals="12" coveredconditionals="11" methods="4" coveredmethods="4"/>
+        <line num="5" count="2" type="stmt"/>
+        <line num="6" count="2" type="stmt"/>
+        <line num="7" count="2" type="stmt"/>
+        <line num="10" count="7" type="stmt"/>
+        <line num="11" count="7" type="stmt"/>
+        <line num="12" count="7" type="stmt"/>
+        <line num="13" count="7" type="stmt"/>
+        <line num="15" count="7" type="stmt"/>
+        <line num="17" count="7" type="stmt"/>
+        <line num="18" count="42" type="cond" truecount="4" falsecount="0"/>
+        <line num="19" count="7" type="stmt"/>
+        <line num="20" count="7" type="stmt"/>
+        <line num="21" count="7" type="stmt"/>
+        <line num="25" count="7" type="stmt"/>
+        <line num="26" count="7" type="stmt"/>
+        <line num="27" count="7" type="stmt"/>
+        <line num="31" count="6" type="stmt"/>
+        <line num="32" count="6" type="stmt"/>
+        <line num="33" count="6" type="stmt"/>
+        <line num="35" count="6" type="cond" truecount="1" falsecount="1"/>
+        <line num="36" count="6" type="stmt"/>
+        <line num="37" count="6" type="stmt"/>
+        <line num="41" count="6" type="stmt"/>
+        <line num="42" count="6" type="stmt"/>
+        <line num="47" count="8" type="cond" truecount="4" falsecount="0"/>
+        <line num="48" count="7" type="stmt"/>
+        <line num="49" count="7" type="cond" truecount="2" falsecount="0"/>
+        <line num="50" count="6" type="stmt"/>
+      </file>
+    </package>
+    <package name="winner">
+      <metrics statements="39" coveredstatements="39" conditionals="52" coveredconditionals="52" methods="2" coveredmethods="2"/>
+      <file name="checkIfWinner.controller.js" path="C:\Users\nadia\Projets\Puissance4Js\js\winner\checkIfWinner.controller.js">
+        <metrics statements="7" coveredstatements="7" conditionals="4" coveredconditionals="4" methods="1" coveredmethods="1"/>
+        <line num="5" count="18" type="stmt"/>
+        <line num="7" count="18" type="cond" truecount="2" falsecount="0"/>
+        <line num="8" count="6" type="cond" truecount="2" falsecount="0"/>
+        <line num="9" count="6" type="stmt"/>
+        <line num="10" count="6" type="stmt"/>
+        <line num="11" count="6" type="stmt"/>
+        <line num="14" count="18" type="stmt"/>
+      </file>
+      <file name="isWinner.logic.js" path="C:\Users\nadia\Projets\Puissance4Js\js\winner\isWinner.logic.js">
+        <metrics statements="32" coveredstatements="32" conditionals="48" coveredconditionals="48" methods="1" coveredmethods="1"/>
+        <line num="2" count="24" type="stmt"/>
+        <line num="3" count="24" type="stmt"/>
+        <line num="4" count="24" type="stmt"/>
+        <line num="5" count="24" type="stmt"/>
+        <line num="8" count="24" type="stmt"/>
+        <line num="9" count="134" type="cond" truecount="2" falsecount="0"/>
+        <line num="10" count="134" type="cond" truecount="2" falsecount="0"/>
+        <line num="11" count="129" type="cond" truecount="4" falsecount="0"/>
+        <line num="12" count="19" type="stmt"/>
+        <line num="17" count="19" type="stmt"/>
+        <line num="18" count="19" type="stmt"/>
+        <line num="22" count="127" type="cond" truecount="2" falsecount="0"/>
+        <line num="24" count="127" type="cond" truecount="2" falsecount="0"/>
+        <line num="25" count="124" type="cond" truecount="4" falsecount="0"/>
+        <line num="29" count="16" type="stmt"/>
+        <line num="30" count="27" type="cond" truecount="2" falsecount="0"/>
+        <line num="31" count="27" type="stmt"/>
+        <line num="33" count="27" type="cond" truecount="2" falsecount="0"/>
+        <line num="34" count="26" type="cond" truecount="4" falsecount="0"/>
+        <line num="35" count="26" type="cond" truecount="4" falsecount="0"/>
+        <line num="39" count="15" type="stmt"/>
+        <line num="40" count="23" type="cond" truecount="2" falsecount="0"/>
+        <line num="41" count="23" type="stmt"/>
+        <line num="43" count="23" type="cond" truecount="2" falsecount="0"/>
+        <line num="44" count="22" type="cond" truecount="4" falsecount="0"/>
+        <line num="45" count="22" type="cond" truecount="4" falsecount="0"/>
+        <line num="49" count="14" type="stmt"/>
+        <line num="50" count="77" type="cond" truecount="2" falsecount="0"/>
+        <line num="51" count="77" type="stmt"/>
+        <line num="53" count="77" type="cond" truecount="2" falsecount="0"/>
+        <line num="54" count="76" type="cond" truecount="4" falsecount="0"/>
+        <line num="56" count="13" type="stmt"/>
+      </file>
+    </package>
+>>>>>>> 441147097acd6b91cf9704c480293db89d9afdbc
   </project>
 </coverage>

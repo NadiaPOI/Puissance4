@@ -5,13 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Puissance 4</title>
-    <base href="https://nadiapoi.github.io/Puissance4/" />
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
   <body>
     <h1>Puissance 4</h1>
+    <button id="start">Start a Game</button>
     <section id="displayWinner"></section>
-    <table id="gameboard"></table>
+    <aside id="form">
+      <form>
+        <label for="row">Please choose the number of rows :</label>
+        <input type="text" name="row" id="row" placeholder="Number of rows" required>
+        <label for="col">Please choose the number of columns :</label>
+        <input type="text" name="col" id="col" placeholder="Number of columns" required>
+        <input type="submit" value="Generate gameboard">
+      </form>
+    </aside>
 
     <script type="module" src="./js/index.js"></script>
   </body>
