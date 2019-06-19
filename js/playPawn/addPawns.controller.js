@@ -3,14 +3,14 @@ import { turnOfPlayAI, findEmptyColumn } from '../AI/turnOfPlayAI.logic.js';
 import { checkIfWinner } from '../winner/checkIfWinner.controller.js';
 
 let randomFunction = Math.random;
-let yellowWinner = false;
-let redWinner = false;
+let isWinner = false;
 
 export function addYellowPawn(gameboard, column) {
   let col = column;
   let indexRow = gameboard.length - 1;
   let indexColumn = col.className;
   let lastRow = document.getElementById(gameboard.length - 1);
+  isWinner = false;
 
   col = lastRow.childNodes[indexColumn].lastChild;
 
@@ -24,13 +24,15 @@ export function addYellowPawn(gameboard, column) {
 
   col.setAttribute('src', './img/yellow.png');
   addPawn(gameboard, indexColumn, 'Y');
-  yellowWinner = checkIfWinner(gameboard, indexRow, indexColumn, 'Y') === true;
+  isWinner = checkIfWinner(gameboard, indexRow, indexColumn, 'Y');
+  return isWinner;
 }
 
 export function addRedPawn(gameboard) {
   let randomColumn = findEmptyColumn(gameboard, randomFunction);
   let newGameboard = turnOfPlayAI(gameboard, randomColumn);
   let row = newGameboard[newGameboard.length - 1];
+  isWinner = false;
 
   if (row.includes('R')) {
     let indexPlayedRow = newGameboard.indexOf(row);
@@ -39,15 +41,24 @@ export function addRedPawn(gameboard) {
     ].lastChild;
 
     playedColumn.setAttribute('src', './img/red.png');
-    redWinner = checkIfWinner(gameboard, indexPlayedRow, randomColumn, 'R') === true;
+    isWinner = checkIfWinner(gameboard, indexPlayedRow, randomColumn, 'R');
   }
+  return isWinner;
 }
 
 export function addPawns(currentColumn, gameboard) {
-  if (yellowWinner === false && redWinner === false) {
-    addYellowPawn(gameboard, currentColumn);
-    if (yellowWinner === false) {
-      addRedPawn(gameboard);
+  let isEmptyArray = gameboard.every((row) => {
+    return !row.includes('Y') || !row.includes('R');
+  });
+
+  if (isEmptyArray) {
+    isWinner = addYellowPawn(gameboard, currentColumn);
+    isWinner = addRedPawn(gameboard);
+  } else if (!isWinner) {
+    isWinner = addYellowPawn(gameboard, currentColumn);
+
+    if (!isWinner) {
+      isWinner = addRedPawn(gameboard);
     }
   }
 }

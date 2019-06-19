@@ -1,0 +1,34 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`restartGame should display a form to submit a board when you click to the button start again 1`] = `
+<aside>
+  
+      
+  <form />
+  
+        
+  <input
+    id="row"
+    name="row"
+    type="text"
+    value="6"
+  />
+  
+        
+  <input
+    id="col"
+    name="col"
+    type="text"
+    value="7"
+  />
+  
+        
+  <input
+    type="submit"
+    value="Generate gameboard"
+  />
+  
+      
+    
+</aside>
+`;
