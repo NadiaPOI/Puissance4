@@ -14,9 +14,9 @@
     <aside id="form">
       <form>
         <label for="row">Please choose the number of rows :</label>
-        <input type="text" name="row" id="row" placeholder="Number of rows" required>
+        <input type="number" name="row" id="row" placeholder="Number of rows" min="4" max="50" required>
         <label for="col">Please choose the number of columns :</label>
-        <input type="text" name="col" id="col" placeholder="Number of columns" required>
+        <input type="number" name="col" id="col" placeholder="Number of columns" min="4" max="50" required>
         <input type="submit" value="Generate gameboard">
       </form>
     </aside>
