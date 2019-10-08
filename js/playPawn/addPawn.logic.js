@@ -7,13 +7,9 @@ export function addPawn(gameboard, column, colorPlayer) {
     throw new Error('The column is full');
   }
 
-  /* while (board[lastRow][column] !== '' && lastRow > 0) {
-    lastRow -= 1;
-  }
-  board[lastRow][column] = colorPlayer;
-  */
-
-  let emptiesRows = gameboard.filter((row) => !(row[column] === 'Y' || row[column] === 'R'));
+  let emptiesRows = gameboard.filter(
+    (row) => !(row[column] === 'Y' || row[column] === 'R')
+  );
   let lastRow = emptiesRows.length - 1;
   emptiesRows[lastRow][column] = colorPlayer;
 
